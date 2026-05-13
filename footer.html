@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <style>
+      :root {
+        --stkPrimaryRed: #e30613;
+        --stkNavy: #0b0f2b;
+        --stkDeepBlue: #050c2f;
+        --stkLightBg: #f4f4f6;
+        --stkTextGray: #6b7280;
+        --stkSoftPink: #fde8ea;
+        --stkWhite: #ffffff;
+        --ftrOverlay: rgba(5, 12, 47, 0.96);
+        --ftrTransition: all 0.3s ease;
+      }
+
+      /* RESET & BASE */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ftrMainFooter {
+        background-color: var(--stkDeepBlue);
+        color: var(--stkWhite);
+        padding: 60px 0 0 0;
+        font-family: "Inter", sans-serif;
+        position: relative;
+        overflow: hidden;
+        border-top: 4px solid var(--stkPrimaryRed);
+        width: 100%;
+      }
+
+      .ftrContainer {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* GRID SYSTEM - MOBILE FIRST */
+      .ftrGrid {
+        display: grid;
+        grid-template-columns: 100%; /* Explicit single column for mobile */
+        gap: 40px;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .ftrGrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .ftrGrid {
+          grid-template-columns: 1.2fr 1fr 0.8fr 1fr;
+        }
+      }
+
+      /* COLUMN 1: BRAND */
+      .ftrBrandBox .ftrLogo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      .ftrBrandBox h2 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: var(--stkWhite);
+        word-wrap: break-word;
+      }
+
+      .ftrBrandBox p {
+        font-size: 0.9rem;
+        color: var(--stkTextGray);
+        line-height: 1.6;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+      }
+
+      .ftrSeoKeywords {
+        display: none;
+      }
+
+      /* COLUMN 2: MAP */
+      .ftrColTitle {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 800;
+        margin-bottom: 25px;
+        color: var(--stkPrimaryRed);
+        position: relative;
+        display: inline-block;
+      }
+
+      .ftrMapWrapper {
+        width: 100%;
+        height: 200px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--stkNavy);
+        overflow: hidden;
+      }
+
+      .ftrMapWrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        /* filter: grayscale(1) invert(0.9) contrast(1.2); */
+      }
+
+      /* COLUMN 3: QR SECTION */
+      .ftrQrBox {
+        text-align: left;
+      }
+
+      .ftrQrImage {
+        width: 140px;
+        height: 140px;
+        background: var(--stkWhite);
+        padding: 10px;
+        margin-bottom: 15px;
+        max-width: 100%;
+      }
+
+      .ftrQrBox p {
+        font-size: 0.85rem;
+        color: var(--stkTextGray);
+        font-weight: 600;
+      }
+
+      /* COLUMN 4: CONTACT */
+      .ftrContactList {
+        list-style: none;
+        padding: 0;
+      }
+
+      .ftrContactItem {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .ftrContactIcon {
+        color: var(--stkPrimaryRed);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .ftrContactText {
+        overflow: hidden; /* Prevents text overflow */
+        width: 100%;
+      }
+
+      .ftrContactText h4 {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.5;
+        margin-bottom: 4px;
+      }
+
+      .ftrContactText a,
+      .ftrContactText span {
+        color: var(--stkWhite);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: var(--ftrTransition);
+        display: block;
+        word-break: break-all; /* Critical for long emails/links on mobile */
+        overflow-wrap: anywhere;
+      }
+
+      .ftrContactText a:hover {
+        color: var(--stkPrimaryRed);
+      }
+
+      .ftrEmergencyTag {
+        background: var(--stkPrimaryRed);
+        color: var(--stkWhite);
+        padding: 4px 10px;
+        font-size: 0.65rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .ftrSocialLinks {
+        display: flex;
+        gap: 10px;
+        margin-top: 25px;
+        flex-wrap: wrap;
+      }
+
+      .ftrSocialBtn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--stkNavy);
+        color: var(--stkWhite);
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: var(--ftrTransition);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .ftrSocialBtn:hover {
+        background: var(--stkPrimaryRed);
+        transform: translateY(-3px);
+      }
+
+      /* COPYRIGHT BAR */
+      .ftrBottomBar {
+        margin-top: 60px;
+        padding: 25px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(0, 0, 0, 0.2);
+        width: 100%;
+      }
+
+      .ftrBottomFlex {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .ftrBottomFlex {
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: left;
+        }
+      }
+
+      .ftrBottomFlex p {
+        font-size: 0.75rem;
+        color: var(--stkTextGray);
+        letter-spacing: 0.5px;
+        word-wrap: break-word;
+      }
+
+      .ftrBottomFlex strong {
+        color: var(--stkWhite);
+      }
+
+      /* BACK TO TOP */
+      #ftrBackToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        background: var(--stkPrimaryRed);
+        color: var(--stkWhite);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--ftrTransition);
+        box-shadow: 0 10px 20px rgba(227, 6, 19, 0.3);
+      }
+
+      #ftrBackToTop.ftrVisible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #ftrBackToTop:hover {
+        background: var(--stkWhite);
+        color: var(--stkPrimaryRed);
+        transform: scale(1.1);
+      }
+    </style>
+    <!-- FONT AWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <footer
+      class="ftrMainFooter"
+      itemscope
+      itemtype="http://schema.org/LocalBusiness"
+    >
+      <div class="ftrContainer">
+        <div class="ftrGrid">
+          <!-- COLUMN 1: BRAND -->
+          <div class="ftrBrandBox">
+            <img
+              src="./assets/logoo.webp"
+              alt="Sugar City Ambulance Services Logo"
+              class="ftrLogo"
+              loading="lazy"
+              onclick="window.location.href = 'index.html'"
+              style="cursor: pointer"
+            />
+            <h2 itemprop="name">Sugar City Ambulance</h2>
+            <p itemprop="description">
+              Premium 24/7
+              <strong>emergency ambulance service</strong> providing life-saving
+              medical transport. We specialize in
+              <strong>ICU ambulance</strong> and
+              <strong>ventilator ambulance</strong> support, serving
+              <strong>KM Doddi</strong>, <strong>Bharathi Nagar</strong>,
+              <strong>Malavalli</strong>, and the wider Mandya region.
+            </p>
+          </div>
+
+          <!-- COLUMN 2: FIND US (MAP) -->
+          <div class="ftrMapCol">
+            <h3 class="ftrColTitle">Find Us</h3>
+            <div class="ftrMapWrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.4707038342435!2d77.03322127411234!3d12.484929325363275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf070004d851d7%3A0xc15f18c7130c5ee3!2sSugar%20City%20ambulance%20service!5e0!3m2!1sen!2sin!4v1778396713061!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Sugar City Ambulance Location"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: QR SECTION -->
+          <div class="ftrQrCol">
+            <h3 class="ftrColTitle">Quick Contact</h3>
+            <div class="ftrQrBox">
+              <img
+                src="./assets/QR.webp"
+                alt="Scan to Call"
+                class="ftrQrImage"
+                loading="lazy"
+              />
+              <p>Scan to get Location</p>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: CONTACT -->
+          <div class="ftrContactCol">
+            <h3 class="ftrColTitle">Emergency Links</h3>
+            <ul class="ftrContactList">
+              <li
+                class="ftrContactItem"
+                itemprop="address"
+                itemscope
+                itemtype="http://schema.org/PostalAddress"
+              >
+                <div class="ftrContactIcon">
+                  <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Headquarters</h4>
+                  <span itemprop="streetAddress">Bharathi Nagar, KM Doddi</span>
+                  <span itemprop="addressLocality">Mandya, Karnataka</span>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>24/7 Helpline</h4>
+                  <a href="tel:+9186630453040" itemprop="telephone"
+                    >+91 86630453040</a
+                  >
+                  <br />
+                  <a href="tel:+919740855109" itemprop="telephone"
+                    >+91 9740855109</a
+                  ><br />
+                  <a href="tel:+918105980578" itemprop="telephone"
+                    >+91 8105980578</a
+                  >
+                  <div class="ftrEmergencyTag">Emergency Ready</div>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Email</h4>
+                  <a href="mailto:sugarcityambulance@gmail.com" itemprop="email"
+                    >sugarcityambulance@gmail.com</a
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div class="ftrSocialLinks">
+              <a
+                href="https://wa.me/86630453040"
+                class="ftrSocialBtn"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/"
+                class="ftrSocialBtn"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                class="ftrSocialBtn"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/"
+                class="ftrSocialBtn"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="ftrBottomBar">
+        <div class="ftrContainer">
+          <div class="ftrBottomFlex">
+            <p>
+              &copy; <span id="ftrYear"></span>
+              <strong>Sugar City Ambulance</strong>. All Rights Reserved.
+            </p>
+            <p>
+              <i
+                class="fas fa-shield-heart"
+                style="color: var(--stkPrimaryRed); margin-right: 5px"
+              ></i>
+              Designed By
+              <a
+                href="https://arouzatechlabs.in/"
+                style="text-decoration: none; color: var(--stkPrimaryRed)"
+                >AROUZA TECHLABS
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GO TO TOP BUTTON -->
+      <div id="ftrBackToTop" title="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </footer>
+    <script src="./navbar.js"></script>
+    <script src="./footer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("ftrYear").textContent =
+          new Date().getFullYear();
+        const backToTop = document.getElementById("ftrBackToTop");
+
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (window.pageYOffset > 400) {
+              backToTop.classList.add("ftrVisible");
+            } else {
+              backToTop.classList.remove("ftrVisible");
+            }
+          },
+          { passive: true },
+        );
+
+        backToTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PRIMARY SEO TAGS -->
+    <title>
+      About Sugar City Ambulance | Leading ICU & Emergency Services in Mandya &
+      Mysore
+    </title>
+    <meta
+      name="description"
+      content="Discover the mission of Sugar City Ambulance Services. Founded in 2020 in KM Doddi, we provide 24/7 ICU ventilator ambulance, oxygen support, and reliable medical transportation across Mandya and Mysore."
+    />
+    <meta
+      name="keywords"
+      content="Ambulance service in Mandya, Ambulance service in Mysore, Emergency ambulance service, ICU ambulance service, Ventilator ambulance, Oxygen ambulance, Dead body freezer service, Ambulance service in KM Doddi, Bharathinagar ambulance"
+    />
+
+    <!-- OPEN GRAPH / SOCIAL -->
+    <meta
+      property="og:title"
+      content="Sugar City Ambulance Services | Our Mission & Journey"
+    />
+    <meta
+      property="og:description"
+      content="Dedicated to saving lives with premium ICU and emergency medical transport in Karnataka. Founded by Yamuna N S."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <style>
+      :root {
+        --stkPrimaryRed: #e30613;
+        --stkNavy: #0b0f2b;
+        --stkDeepBlue: #050c2f;
+        --stkLightBg: #f4f4f6;
+        --stkTextGray: #6b7280;
+        --stkSoftPink: #fde8ea;
+        --stkWhite: #ffffff;
+        --primary: var(--stkPrimaryRed);
+        --overlay: rgba(5, 12, 47, 0.65);
+        --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        background-color: var(--stkWhite);
+        color: var(--stkDeepBlue);
+        overflow-x: hidden; /* Prevents horizontal scroll */
+        line-height: 1.6;
+        width: 100%;
+      }
+
+      /* Utility for mobile containers */
+      .abtSectionContainer {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* HERO SECTION */
+
+      .abtHeroSection {
+        position: relative;
+        width: 100%;
+        min-height: 380px;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+
+        background-image: url("./assets/hero.webp");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* DARK OVERLAY */
+
+      .abtHeroSection::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(
+          rgba(5, 12, 47, 0.82),
+          rgba(5, 12, 47, 0.82)
+        );
+
+        z-index: 1;
+      }
+
+      /* EXTRA DEPTH LAYER */
+
+      .abtHeroSection::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.18);
+
+        z-index: 2;
+      }
+
+      /* GRID */
+
+      .abtHeroGrid {
+        position: relative;
+        z-index: 5;
+
+        width: 100%;
+        max-width: 1400px;
+
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* CONTENT */
+
+      .abtHeroContent {
+        width: 100%;
+        max-width: 900px;
+
+        padding: 100px 0 80px;
+
+        color: var(--stkWhite);
+      }
+      /* MOBILE HERO NAVBAR GAP FIX */
+
+      @media (max-width: 1023px) {
+        .abtHeroSection {
+          padding-top: 105px;
+        }
+
+        .abtHeroContent {
+          padding-top: 40px;
+        }
+      }
+      /* BREADCRUMB */
+
+      .abtBreadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 0.8rem;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        margin-bottom: 20px;
+
+        color: var(--stkWhite);
+      }
+
+      .abtBreadcrumb span {
+        color: var(--stkPrimaryRed);
+      }
+
+      /* TITLE */
+
+      .abtHeroTitle {
+        font-size: 2.4rem;
+        font-weight: 900;
+
+        text-transform: uppercase;
+        line-height: 1.05;
+        letter-spacing: -1px;
+
+        color: var(--stkWhite);
+
+        text-shadow:
+          0 2px 10px rgba(0, 0, 0, 0.45),
+          0 4px 20px rgba(0, 0, 0, 0.35);
+      }
+
+      /* TABLET */
+
+      @media (min-width: 768px) {
+        .abtHeroSection {
+          min-height: 480px;
+        }
+
+        .abtHeroContent {
+          padding: 140px 0 110px;
+        }
+
+        .abtHeroTitle {
+          font-size: 4.5rem;
+        }
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 1200px) {
+        .abtHeroSection {
+          min-height: 580px;
+        }
+
+        .abtHeroTitle {
+          font-size: 6rem;
+        }
+      }
+
+      .abtBreadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        opacity: 0.8;
+      }
+
+      .abtBreadcrumb span {
+        color: var(--stkPrimaryRed);
+      }
+
+      .abtHeroTitle {
+        font-size: 2.5rem; /* Reduced from 3rem for mobile safety */
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        word-wrap: break-word;
+      }
+
+      @media (min-width: 768px) {
+        .abtHeroTitle {
+          font-size: 5rem;
+        }
+      }
+
+      .abtHeroImgWrapper {
+        position: relative;
+        height: 250px;
+        background: url("./assets/hero.webp") center/cover no-repeat;
+      }
+
+      @media (min-width: 1024px) {
+        .abtHeroImgWrapper {
+          height: 100%;
+          min-height: 500px;
+        }
+        .abtHeroImgWrapper::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100px;
+          width: 200px;
+          height: 100%;
+          background: var(--stkDeepBlue);
+          transform: skewX(-15deg);
+          z-index: 2;
+        }
+      }
+
+      .abtVisionMissionSection {
+        padding: 60px 0;
+        background-color: var(--stkLightBg);
+      }
+
+      .abtCardGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      @media (min-width: 768px) {
+        .abtCardGrid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .abtCard {
+        background: var(--stkWhite);
+        padding: 40px 30px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        transition: var(--transition);
+        border-bottom: 5px solid transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .abtCard:hover {
+        transform: translateY(-10px);
+        border-bottom-color: var(--stkPrimaryRed);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .abtCardIcon {
+        width: 50px;
+        height: 50px;
+        background: var(--stkSoftPink);
+        color: var(--stkPrimaryRed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        border-radius: 50%;
+      }
+
+      .abtCard h2 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--stkNavy);
+      }
+
+      .abtFounderSection {
+        padding: 80px 0;
+        background-color: var(--stkNavy);
+        color: var(--stkWhite);
+        overflow: hidden;
+      }
+
+      .abtFounderGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 50px;
+      }
+
+      @media (min-width: 1024px) {
+        .abtFounderGrid {
+          grid-template-columns: 0.8fr 1.2fr;
+        }
+      }
+
+      .abtFounderImgBox {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .abtFounderCircle {
+        width: 280px;
+        height: 280px;
+        max-width: 85vw;
+        border-radius: 50%;
+        border: 10px solid rgba(255, 255, 255, 0.05);
+        background: url("Screenshot (1140).png") center/cover no-repeat;
+        position: relative;
+        z-index: 5;
+      }
+
+      @media (min-width: 1024px) {
+        .abtFounderCircle {
+          width: 420px;
+          height: 420px;
+        }
+      }
+
+      .abtFounderContent h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        line-height: 1.2;
+      }
+
+      .abtQuoteBox {
+        font-size: 1rem;
+        font-style: italic;
+        color: #d1d5db;
+        margin-bottom: 25px;
+        position: relative;
+        padding-left: 30px;
+      }
+
+      .abtQuoteBox::before {
+        content: "\f10d";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--stkPrimaryRed);
+        font-size: 1.2rem;
+      }
+
+      .abtFounderContent p {
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        color: #9ca3af;
+      }
+
+      .abtHighlight {
+        color: var(--stkPrimaryRed);
+        font-weight: 700;
+      }
+
+      .abtSignature {
+        margin-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+      }
+
+      .abtSignName {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--stkWhite);
+      }
+
+      .abtHistorySection {
+        padding: 80px 0;
+        background: var(--stkWhite);
+      }
+
+      .abtSideGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      @media (min-width: 1024px) {
+        .abtSideGrid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .abtReverseOrder {
+          direction: rtl;
+        }
+        .abtReverseOrder .abtTextContent {
+          direction: ltr;
+        }
+      }
+
+      .abtSideImg {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 10px 10px 0px var(--stkLightBg);
+        object-fit: cover;
+        display: block;
+      }
+
+      @media (min-width: 1024px) {
+        .abtSideImg {
+          box-shadow: 20px 20px 0px var(--stkLightBg);
+        }
+      }
+
+      .abtTextContent h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: var(--stkNavy);
+      }
+
+      .abtServiceList {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 25px;
+      }
+
+      @media (min-width: 480px) {
+        .abtServiceList {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .abtServiceItem {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--stkTextGray);
+      }
+
+      .abtServiceItem i {
+        color: var(--stkPrimaryRed);
+        font-size: 10px;
+        margin-top: 5px;
+      }
+
+      .abtStatsSection {
+        padding: 80px 0;
+        background: var(--stkDeepBlue);
+        color: var(--stkWhite);
+      }
+
+      .abtStatsGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      @media (min-width: 480px) {
+        .abtStatsGrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .abtStatsGrid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .abtStatItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .abtCircularProgress {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        margin-bottom: 15px;
+      }
+
+      .abtCircularProgress svg {
+        width: 140px;
+        height: 140px;
+        transform: rotate(-90deg);
+      }
+
+      .abtCircularProgress circle {
+        fill: none;
+        stroke-width: 8;
+        stroke-linecap: round;
+      }
+
+      .abtCircleBg {
+        stroke: rgba(255, 255, 255, 0.05);
+      }
+
+      .abtCircleMain {
+        stroke: var(--stkPrimaryRed);
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+        transition: stroke-dashoffset 2s ease-out;
+      }
+
+      .abtStatValue {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.8rem;
+        font-weight: 800;
+      }
+
+      .abtStatLabel {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #9ca3af;
+        letter-spacing: 1px;
+      }
+
+      .abtCtaSection {
+        padding: 100px 0;
+        background:
+          linear-gradient(var(--overlay), var(--overlay)),
+          url("Screenshot (1202).jpg") center/cover no-repeat;
+        text-align: center;
+        color: var(--stkWhite);
+      }
+
+      .abtCtaTitle {
+        font-size: 2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        padding: 0 10px;
+      }
+
+      .abtCtaPara {
+        max-width: 600px;
+        margin: 0 auto 35px;
+        font-size: 1rem;
+        opacity: 0.9;
+        padding: 0 15px;
+      }
+
+      .abtCtaBtn {
+        display: inline-block;
+        background: var(--stkPrimaryRed);
+        color: var(--stkWhite);
+        padding: 18px 40px;
+        font-size: 0.9rem;
+        font-weight: 800;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        transition: var(--transition);
+      }
+
+      .abtCtaBtn:hover {
+        background: var(--stkWhite);
+        color: var(--stkDeepBlue);
+        transform: translateY(-3px);
+      }
+
+      .abtFadeIn {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
+      }
+
+      .abtFadeIn.abtVisible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Topbar -->
+    <div class="navbtopbar" id="navbtopbar">
+      <a href="tel:+9186630453040">
+        <i class="fas fa-phone-alt"></i>
+        <span>+91 86630453040</span>
+      </a>
+    </div>
+
+    <header class="navbheader" id="navbheader">
+      <div class="navbcontainer">
+        <!-- Logo & Text Section -->
+        <a
+          href="./index.html"
+          class="navblogowrapper"
+          aria-label="Sugar City Ambulance Home"
+        >
+          <img
+            src="./assets/logo.webp"
+            alt="Sugar City Ambulance Services Logo"
+            id="navblogoid"
+          />
+          <div class="navbbrandtext">
+            <span class="navbbrandtitle">Sugar City</span>
+            <span class="navbbrandsubtitle">Ambulance Services</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbmenu" id="navbmenuwrapper">
+          <ul class="navbul">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="navbrightactions">
+          <div class="navbsocialswrapper">
+            <a href="https://wa.me/9186630453040" class="navbsociallink"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://www.facebook.com/" class="navbsociallink"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/" class="navbsociallink"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/" class="navbsociallink"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+
+          <!-- Call Block (Desktop Only) -->
+          <a
+            href="tel:+9186630453040"
+            class="navbcontactblock"
+            id="navbcallbutton"
+          >
+            <div class="navbdialiconarea">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="navbcontactinfo">
+              <span class="navbcalltext">Call Us Now</span>
+              <span class="navbphonenumber">+91 86630453040</span>
+            </div>
+          </a>
+
+          <!-- Hamburger (Mobile Only) -->
+          <button
+            class="navbhamburger"
+            id="navbhamburgerbtn"
+            aria-label="Open Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="navbmobileoverlay" id="navbmobilemenu">
+      <button class="navbmobileclose" id="navbclosebtn">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <ul class="navbmobilelinks">
+        <li><a href="./index.html" class="navbmobileitem">Home</a></li>
+        <li><a href="./services.html" class="navbmobileitem">Services</a></li>
+        <li><a href="./about.html" class="navbmobileitem">About Us</a></li>
+        <li><a href="./gallery.html" class="navbmobileitem">Gallery</a></li>
+        <li><a href="./contact.html" class="navbmobileitem">Contact</a></li>
+      </ul>
+
+      <div class="navbmobilesocials">
+        <a href="https://wa.me/9186630453040" class="navbmobilesociallink"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://www.facebook.com/" class="navbmobilesociallink"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/" class="navbmobilesociallink"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/" class="navbmobilesociallink"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </div>
+    <main>
+      <section class="abtHeroSection">
+        <div class="abtHeroGrid">
+          <div class="abtHeroContent">
+            <nav class="abtBreadcrumb" aria-label="Breadcrumb">
+              HOME
+
+              <i
+                class="fas fa-chevron-right"
+                style="font-size: 8px; margin: 0 5px; align-self: center"
+              ></i>
+
+              <span>ABOUT US</span>
+            </nav>
+
+            <h1 class="abtHeroTitle">ABOUT US</h1>
+
+            <p
+              style="
+                margin-top: 18px;
+                font-size: 1rem;
+                max-width: 650px;
+                line-height: 1.8;
+                opacity: 0.92;
+                color: #ffffff;
+              "
+            >
+              Sugar City Ambulance Services is a trusted emergency medical
+              transportation provider serving KM Doddi (Bharathinagar),
+              Malavalli, Maddur, Mandya, and Mysore with 24/7 ambulance support,
+              ICU ambulance services, ventilator ambulance facilities, oxygen
+              ambulances, and critical care patient transportation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="abtVisionMissionSection">
+        <div class="abtSectionContainer">
+          <div class="abtCardGrid">
+            <article class="abtCard abtFadeIn">
+              <div class="abtCardIcon"><i class="fas fa-eye"></i></div>
+              <h2>Our Vision</h2>
+              <p>
+                To redefine emergency healthcare accessibility in rural
+                Karnataka, ensuring that world-class
+                <strong>ICU ambulance services</strong> are available within
+                minutes to every citizen in KM Doddi and beyond.
+              </p>
+            </article>
+            <article class="abtCard abtFadeIn">
+              <div class="abtCardIcon"><i class="fas fa-bullseye"></i></div>
+              <h2>Our Mission</h2>
+              <p>
+                We are committed to providing
+                <strong>24/7 emergency medical support</strong> with compassion
+                and precision. Our mission is to bridge the gap between patient
+                and hospital through reliable medical transport.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="abtFounderSection">
+        <div class="abtSectionContainer">
+          <div class="abtFounderGrid">
+            <div class="abtFounderImgBox abtFadeIn">
+              <div
+                class="abtFounderCircle"
+                role="img"
+                aria-label="Yamuna N S Founder"
+              ></div>
+            </div>
+            <div class="abtFounderContent abtFadeIn">
+              <h2>Message from our Founder</h2>
+              <div class="abtQuoteBox">
+                "In a medical emergency, every second counts. Our goal is to
+                ensure those seconds are used to save lives."
+              </div>
+              <p>
+                Founded in 2020 at the heart of
+                <span class="abtHighlight">KM Doddi (Bharathinagar)</span>,
+                Sugar City Ambulance Services was born from a simple
+                realization: the need for high-spec medical transport in our
+                community was critical.
+              </p>
+              <p>
+                Whether it is a <strong>ventilator ambulance</strong> for a
+                critical shift or a
+                <strong>dead body freezer service</strong> during a family's
+                toughest time, we stand as a pillar of reliability.
+              </p>
+              <div class="abtSignature">
+                <div class="abtSignName">YAMUNA N S</div>
+                <div class="abtSignTitle">Founder & Director</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="abtHistorySection">
+        <div class="abtSectionContainer">
+          <div class="abtSideGrid">
+            <div class="abtFadeIn">
+              <img
+                src="Screenshot (1201).jpg"
+                alt="Ambulance Team"
+                class="abtSideImg"
+              />
+            </div>
+            <div class="abtTextContent abtFadeIn">
+              <h2>Our Journey</h2>
+              <p>
+                Since 2020, we have grown from a single ambulance to a
+                comprehensive medical response fleet. We identified that the
+                corridor between
+                <strong>KM Doddi, Malavalli, and Mysore</strong> required
+                specialized <strong>ICU setup ambulances</strong>.
+              </p>
+              <ul class="abtServiceList">
+                <li class="abtServiceItem">
+                  <i class="fas fa-circle"></i> Ventilator Support
+                </li>
+                <li class="abtServiceItem">
+                  <i class="fas fa-circle"></i> ICU Setup
+                </li>
+                <li class="abtServiceItem">
+                  <i class="fas fa-circle"></i> Oxygen Concentrators
+                </li>
+                <li class="abtServiceItem">
+                  <i class="fas fa-circle"></i> Freezer Boxes
+                </li>
+                <li class="abtServiceItem">
+                  <i class="fas fa-circle"></i> Cab Services
+                </li>
+                <li class="abtServiceItem">
+                  <i class="fas fa-circle"></i> 24/7 Dispatch
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="abtHistorySection" style="background: var(--stkLightBg)">
+        <div class="abtSectionContainer">
+          <div class="abtSideGrid abtReverseOrder">
+            <div class="abtFadeIn">
+              <img
+                src="Screenshot (1202).jpg"
+                alt="Medical Equipment"
+                class="abtSideImg"
+              />
+            </div>
+            <div class="abtTextContent abtFadeIn">
+              <h2>Care, Commitment & Emergency Excellence</h2>
+              <p>
+                Our culture is rooted in a "Patient-First" philosophy. Our
+                support teams are trained in both medical technicalities and
+                providing emotional stability during high-stress transfers.
+              </p>
+              <p>
+                When you choose our
+                <strong>ambulance service in Mysore</strong> or Mandya, you are
+                choosing a team that treats your family like their own.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="abtStatsSection">
+        <div class="abtSectionContainer">
+          <div class="abtStatsGrid">
+            <div class="abtStatItem">
+              <div class="abtCircularProgress">
+                <svg>
+                  <circle class="abtCircleBg" cx="70" cy="70" r="65"></circle>
+                  <circle
+                    class="abtCircleMain"
+                    cx="70"
+                    cy="70"
+                    r="65"
+                    data-value="5"
+                    data-max="10"
+                  ></circle>
+                </svg>
+                <div class="abtStatValue" id="statYears">0</div>
+              </div>
+              <div class="abtStatLabel">Years Excellence</div>
+            </div>
+            <div class="abtStatItem">
+              <div class="abtCircularProgress">
+                <svg>
+                  <circle class="abtCircleBg" cx="70" cy="70" r="65"></circle>
+                  <circle
+                    class="abtCircleMain"
+                    cx="70"
+                    cy="70"
+                    r="65"
+                    data-value="24"
+                    data-max="24"
+                  ></circle>
+                </svg>
+                <div class="abtStatValue">24/7</div>
+              </div>
+              <div class="abtStatLabel">Emergency Support</div>
+            </div>
+            <div class="abtStatItem">
+              <div class="abtCircularProgress">
+                <svg>
+                  <circle class="abtCircleBg" cx="70" cy="70" r="65"></circle>
+                  <circle
+                    class="abtCircleMain"
+                    cx="70"
+                    cy="70"
+                    r="65"
+                    data-value="1000"
+                    data-max="1200"
+                  ></circle>
+                </svg>
+                <div class="abtStatValue" id="statPatients">0</div>
+              </div>
+              <div class="abtStatLabel">Patients Assisted</div>
+            </div>
+            <div class="abtStatItem">
+              <div class="abtCircularProgress">
+                <svg>
+                  <circle class="abtCircleBg" cx="70" cy="70" r="65"></circle>
+                  <circle
+                    class="abtCircleMain"
+                    cx="70"
+                    cy="70"
+                    r="65"
+                    data-value="5"
+                    data-max="8"
+                  ></circle>
+                </svg>
+                <div class="abtStatValue" id="statLocs">0</div>
+              </div>
+              <div class="abtStatLabel">Service Hubs</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="abtCtaSection">
+        <div class="abtSectionContainer">
+          <h2 class="abtCtaTitle">Need Emergency Ambulance Support?</h2>
+          <p class="abtCtaPara">
+            Our specialized <strong>ICU ambulance service</strong> is ready for
+            dispatch in Mandya, Mysore, and Bharathinagar. Fast response
+            guaranteed.
+          </p>
+          <a href="tel:+9186630453040" class="abtCtaBtn">CONTACT NOW</a>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="ftrMainFooter"
+      itemscope
+      itemtype="http://schema.org/LocalBusiness"
+    >
+      <div class="ftrContainer">
+        <div class="ftrGrid">
+          <!-- COLUMN 1: BRAND -->
+          <div class="ftrBrandBox">
+            <img
+              src="./assets/logoo.webp"
+              alt="Sugar City Ambulance Services Logo"
+              class="ftrLogo"
+              loading="lazy"
+              onclick="window.location.href = 'index.html'"
+              style="cursor: pointer"
+            />
+            <h2 itemprop="name">Sugar City Ambulance</h2>
+            <p itemprop="description">
+              Premium 24/7
+              <strong>emergency ambulance service</strong> providing life-saving
+              medical transport. We specialize in
+              <strong>ICU ambulance</strong> and
+              <strong>ventilator ambulance</strong> support, serving
+              <strong>KM Doddi</strong>, <strong>Bharathi Nagar</strong>,
+              <strong>Malavalli</strong>, and the wider Mandya region.
+            </p>
+          </div>
+
+          <!-- COLUMN 2: FIND US (MAP) -->
+          <div class="ftrMapCol">
+            <h3 class="ftrColTitle">Find Us</h3>
+            <div class="ftrMapWrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.4707038342435!2d77.03322127411234!3d12.484929325363275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf070004d851d7%3A0xc15f18c7130c5ee3!2sSugar%20City%20ambulance%20service!5e0!3m2!1sen!2sin!4v1778396713061!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Sugar City Ambulance Location"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: QR SECTION -->
+          <div class="ftrQrCol">
+            <h3 class="ftrColTitle">Quick Contact</h3>
+            <div class="ftrQrBox">
+              <img
+                src="./assets/QR.webp"
+                alt="Scan to Call"
+                class="ftrQrImage"
+                loading="lazy"
+              />
+              <p>Scan to get Location</p>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: CONTACT -->
+          <div class="ftrContactCol">
+            <h3 class="ftrColTitle">Emergency Links</h3>
+            <ul class="ftrContactList">
+              <li
+                class="ftrContactItem"
+                itemprop="address"
+                itemscope
+                itemtype="http://schema.org/PostalAddress"
+              >
+                <div class="ftrContactIcon">
+                  <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Headquarters</h4>
+                  <span itemprop="streetAddress">Bharathi Nagar, KM Doddi</span>
+                  <span itemprop="addressLocality">Mandya, Karnataka</span>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>24/7 Helpline</h4>
+                  <a href="tel:+9186630453040" itemprop="telephone"
+                    >+91 86630453040</a
+                  >
+                  <br />
+                  <a href="tel:+919740855109" itemprop="telephone"
+                    >+91 9740855109</a
+                  ><br />
+                  <a href="tel:+918105980578" itemprop="telephone"
+                    >+91 8105980578</a
+                  >
+                  <div class="ftrEmergencyTag">Emergency Ready</div>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Email</h4>
+                  <a href="mailto:sugarcityambulance@gmail.com" itemprop="email"
+                    >sugarcityambulance@gmail.com</a
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div class="ftrSocialLinks">
+              <a
+                href="https://wa.me/86630453040"
+                class="ftrSocialBtn"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/"
+                class="ftrSocialBtn"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                class="ftrSocialBtn"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/"
+                class="ftrSocialBtn"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="ftrBottomBar">
+        <div class="ftrContainer">
+          <div class="ftrBottomFlex">
+            <p>
+              &copy; <span id="ftrYear"></span>
+              <strong>Sugar City Ambulance</strong>. All Rights Reserved.
+            </p>
+            <p>
+              <i
+                class="fas fa-shield-heart"
+                style="color: var(--stkPrimaryRed); margin-right: 5px"
+              ></i>
+              Designed By
+              <a
+                href="https://arouzatechlabs.in/"
+                style="text-decoration: none; color: var(--stkPrimaryRed)"
+                >AROUZA TECHLABS
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GO TO TOP BUTTON -->
+      <div id="ftrBackToTop" title="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </footer>
+    <script src="./navbar.js"></script>
+    <script src="./footer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Setup Intersection Observer for Fade-In animations
+        const observerOptions = { threshold: 0.1 };
+        const fadeInObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("abtVisible");
+            }
+          });
+        }, observerOptions);
+
+        document
+          .querySelectorAll(".abtFadeIn")
+          .forEach((el) => fadeInObserver.observe(el));
+
+        // Setup Stats Animation Trigger
+        const statsObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateStats();
+              statsObserver.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        const statsSection = document.querySelector(".abtStatsSection");
+        if (statsSection) statsObserver.observe(statsSection);
+
+        function animateStats() {
+          // Animate Circles
+          document.querySelectorAll(".abtCircleMain").forEach((circle) => {
+            const val = parseFloat(circle.getAttribute("data-value"));
+            const max = parseFloat(circle.getAttribute("data-max"));
+            const percent = val / max;
+            const offset = 440 - 440 * percent;
+            circle.style.strokeDashoffset = offset;
+          });
+
+          // Animate Text Numbers
+          animateNumber("statYears", 6, 2000, "+");
+          animateNumber("statPatients", 1000, 2000, "+");
+          animateNumber("statLocs", 5, 2000, "+");
+        }
+
+        function animateNumber(id, endValue, duration, suffix = "") {
+          const el = document.getElementById(id);
+          if (!el) return;
+          let start = 0;
+          const startTime = performance.now();
+
+          function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const current = Math.floor(progress * endValue);
+            el.innerText = current + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+          }
+          requestAnimationFrame(update);
+        }
+      });
+    </script>
+
+    <!-- SCHEMA JSON-LD FOR LOCAL SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "Sugar City Ambulance Services",
+        "founder": "Yamuna N S",
+        "foundingDate": "2020",
+        "areaServed": ["Mandya", "Mysore", "KM Doddi", "Bharathinagar"],
+        "description": "Leading emergency medical service provider in Mandya and Mysore offering ICU and Ventilator support."
+      }
+    </script>
+  </body>
+</html>

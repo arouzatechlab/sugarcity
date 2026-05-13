@@ -1,0 +1,1284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PRIMARY SEO TAGS -->
+    <title>
+      Ambulance Services in Mandya & Mysore | ICU, Ventilator & Emergency
+      Transport
+    </title>
+    <meta
+      name="description"
+      content="Sugar City Ambulance provides 24/7 emergency medical transport in Mandya and Mysore. Specializing in ICU ventilator ambulances, oxygen support, and dead body freezer services. Reliable care when every second counts."
+    />
+    <meta
+      name="keywords"
+      content="Ambulance service in Mandya, Ambulance service in Mysore, ICU ambulance service, Ventilator ambulance, Oxygen ambulance, Emergency medical transport, KM Doddi ambulance, Bharathinagar ambulance services"
+    />
+
+    <!-- OPEN GRAPH -->
+    <meta
+      property="og:title"
+      content="Sugar City Ambulance Services | 24/7 Emergency Medical Care"
+    />
+    <meta
+      property="og:description"
+      content="Premium ICU and emergency ambulance services across Karnataka. Fast response, advanced equipment, and expert medical staff."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <style>
+      :root {
+        --stkPrimaryRed: #e30613;
+        --stkNavy: #0b0f2b;
+        --stkDeepBlue: #050c2f;
+        --stkLightBg: #f4f4f6;
+        --stkTextGray: #6b7280;
+        --stkSoftPink: #fde8ea;
+        --stkWhite: #ffffff;
+        --primary: var(--stkPrimaryRed);
+        --overlay: rgba(5, 12, 47, 0.75);
+        --srvTransition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        background-color: var(--stkWhite);
+        color: var(--stkDeepBlue);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+
+      /* SEO Utility */
+      .srvHidden {
+        display: none;
+      }
+
+      /* --- HERO SECTION --- */
+
+      .srvHeroSection {
+        position: relative;
+        width: 100%;
+        min-height: 380px;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+
+        background-image: url("./assets/hero.webp");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* DARK OVERLAY */
+
+      .srvHeroSection::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(
+          rgba(5, 12, 47, 0.82),
+          rgba(5, 12, 47, 0.82)
+        );
+
+        z-index: 1;
+      }
+
+      /* EXTRA DEPTH */
+
+      .srvHeroSection::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.18);
+
+        z-index: 2;
+      }
+
+      /* GRID */
+
+      .srvHeroGrid {
+        position: relative;
+        z-index: 5;
+
+        width: 100%;
+        max-width: 1400px;
+
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* CONTENT */
+
+      .srvHeroContent {
+        width: 100%;
+        max-width: 900px;
+
+        padding: 100px 0 80px;
+
+        color: var(--stkWhite);
+      }
+      /* MOBILE HERO NAVBAR GAP FIX */
+
+      @media (max-width: 1023px) {
+        .srvHeroSection {
+          padding-top: 105px;
+        }
+
+        .srvHeroContent {
+          padding-top: 40px;
+        }
+      }
+      /* BREADCRUMB */
+
+      .srvBreadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 0.8rem;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        margin-bottom: 20px;
+
+        color: var(--stkWhite);
+      }
+
+      .srvBreadcrumb span {
+        color: var(--stkPrimaryRed);
+      }
+
+      /* TITLE */
+
+      .srvHeroTitle {
+        font-size: 2.5rem;
+        font-weight: 900;
+
+        text-transform: uppercase;
+        line-height: 1.05;
+        letter-spacing: -1px;
+
+        color: var(--stkWhite);
+
+        text-shadow:
+          0 2px 10px rgba(0, 0, 0, 0.45),
+          0 4px 20px rgba(0, 0, 0, 0.35);
+      }
+
+      /* DESCRIPTION */
+
+      .srvHeroDesc {
+        margin-top: 18px;
+
+        max-width: 650px;
+
+        font-size: 1rem;
+        line-height: 1.8;
+
+        color: rgba(255, 255, 255, 0.92);
+      }
+
+      /* TABLET */
+
+      @media (min-width: 768px) {
+        .srvHeroSection {
+          min-height: 480px;
+        }
+
+        .srvHeroContent {
+          padding: 140px 0 110px;
+        }
+
+        .srvHeroTitle {
+          font-size: 4.5rem;
+        }
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 1200px) {
+        .srvHeroSection {
+          min-height: 580px;
+        }
+
+        .srvHeroTitle {
+          font-size: 6rem;
+        }
+      }
+
+      /* --- SERVICES GRID --- */
+      .srvGridSection {
+        padding: 80px 20px;
+        background-color: var(--stkWhite);
+      }
+
+      .srvContainer {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .srvSectionHeader {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .srvSectionHeader h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--stkNavy);
+        margin-bottom: 15px;
+      }
+
+      .srvSectionHeader p {
+        max-width: 800px;
+        margin: 0 auto;
+        color: var(--stkTextGray);
+        font-size: 1rem;
+      }
+
+      .srvMainGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0; /* No gap for sharp border-to-border look if desired, or small gap */
+        border-top: 2px solid var(--stkNavy);
+        border-left: 2px solid var(--stkNavy);
+      }
+
+      @media (min-width: 640px) {
+        .srvMainGrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .srvMainGrid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .srvCard {
+        padding: 40px 30px;
+        border-right: 2px solid var(--stkNavy);
+        border-bottom: 2px solid var(--stkNavy);
+        transition: var(--srvTransition);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background: var(--stkWhite);
+        cursor: pointer;
+      }
+
+      .srvCard:hover {
+        background: var(--stkNavy);
+        color: var(--stkWhite);
+        transform: translateY(-5px);
+      }
+
+      .srvCardIcon {
+        width: 60px;
+        height: 60px;
+        fill: var(--stkPrimaryRed);
+        transition: var(--srvTransition);
+      }
+
+      .srvCard:hover .srvCardIcon {
+        fill: var(--stkWhite);
+        transform: scale(1.1);
+      }
+
+      .srvCard h3 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .srvCard p {
+        font-size: 0.9rem;
+        color: var(--stkTextGray);
+        transition: var(--srvTransition);
+      }
+
+      .srvCard:hover p {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .srvCardCta {
+        margin-top: auto;
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--stkPrimaryRed);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .srvCard:hover .srvCardCta {
+        color: var(--stkWhite);
+      }
+
+      /* --- HOW IT WORKS (Timeline) --- */
+      .srvProcessSection {
+        padding: 80px 20px;
+        background-color: var(--stkLightBg);
+        overflow: hidden;
+      }
+
+      .srvProcessFlow {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 60px;
+        position: relative;
+      }
+
+      @media (min-width: 1024px) {
+        .srvProcessFlow {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .srvProcessFlow::after {
+          content: "";
+          position: absolute;
+          top: 50px;
+          left: 10%;
+          width: 80%;
+          height: 2px;
+          background: repeating-linear-gradient(
+            to right,
+            var(--stkNavy) 0,
+            var(--stkNavy) 10px,
+            transparent 10px,
+            transparent 20px
+          );
+          z-index: 1;
+        }
+      }
+
+      .srvStep {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .srvStepCircle {
+        width: 100px;
+        height: 100px;
+        background: var(--stkWhite);
+        border: 4px solid var(--stkNavy);
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: var(--srvTransition);
+      }
+
+      .srvStep:hover .srvStepCircle {
+        background: var(--stkPrimaryRed);
+        border-color: var(--stkPrimaryRed);
+        color: var(--stkWhite);
+        transform: scale(1.1);
+      }
+
+      .srvStepNum {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: var(--stkNavy);
+        color: var(--stkWhite);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.8rem;
+      }
+
+      .srvStep h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .srvStep p {
+        font-size: 0.85rem;
+        color: var(--stkTextGray);
+      }
+
+      /* --- KEY ADVANTAGES (Infographic) --- */
+      .srvAdvantageSection {
+        padding: 100px 20px;
+        background: var(--stkWhite);
+      }
+
+      .srvAdvantageWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      @media (min-width: 1024px) {
+        .srvAdvantageWrapper {
+          grid-template-columns: 1fr 1.2fr 1fr;
+        }
+      }
+
+      .srvAdvColumn {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .srvAdvItem {
+        display: flex;
+        gap: 20px;
+        transition: var(--srvTransition);
+      }
+
+      .srvAdvItem.srvRightAlign {
+        text-align: right;
+        flex-direction: row-reverse;
+      }
+
+      .srvAdvIcon {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        background: var(--stkSoftPink);
+        color: var(--stkPrimaryRed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: var(--srvTransition);
+      }
+
+      .srvAdvItem:hover .srvAdvIcon {
+        background: var(--stkPrimaryRed);
+        color: var(--stkWhite);
+      }
+
+      .srvAdvText h5 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .srvAdvText p {
+        font-size: 0.85rem;
+        color: var(--stkTextGray);
+      }
+
+      .srvAdvCenterImg {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .srvAdvCenterImg img {
+        width: 100%;
+        display: block;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
+      }
+
+      /* --- CTA SECTION --- */
+      .srvCtaSection {
+        padding: 100px 20px;
+        background:
+          linear-gradient(var(--overlay), var(--overlay)),
+          url("Screenshot (1202).jpg") center/cover no-repeat fixed;
+        text-align: center;
+        color: var(--stkWhite);
+      }
+
+      .srvCtaContent h2 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .srvCtaContent p {
+        max-width: 600px;
+        margin: 0 auto 40px;
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .srvCtaBtn {
+        display: inline-block;
+        background: var(--stkPrimaryRed);
+        color: var(--stkWhite);
+        padding: 20px 50px;
+        font-size: 1rem;
+        font-weight: 800;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: var(--srvTransition);
+      }
+
+      .srvCtaBtn:hover {
+        background: var(--stkWhite);
+        color: var(--stkDeepBlue);
+        transform: scale(1.05);
+      }
+
+      /* Animation utilities */
+      .srvReveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
+      }
+
+      .srvVisible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Topbar -->
+    <div class="navbtopbar" id="navbtopbar">
+      <a href="tel:+9186630453040">
+        <i class="fas fa-phone-alt"></i>
+        <span>+91 86630453040</span>
+      </a>
+    </div>
+
+    <header class="navbheader" id="navbheader">
+      <div class="navbcontainer">
+        <!-- Logo & Text Section -->
+        <a
+          href="./index.html"
+          class="navblogowrapper"
+          aria-label="Sugar City Ambulance Home"
+        >
+          <img
+            src="./assets/logo.webp"
+            alt="Sugar City Ambulance Services Logo"
+            id="navblogoid"
+          />
+          <div class="navbbrandtext">
+            <span class="navbbrandtitle">Sugar City</span>
+            <span class="navbbrandsubtitle">Ambulance Services</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbmenu" id="navbmenuwrapper">
+          <ul class="navbul">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="navbrightactions">
+          <div class="navbsocialswrapper">
+            <a href="https://wa.me/9186630453040" class="navbsociallink"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://www.facebook.com/" class="navbsociallink"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/" class="navbsociallink"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/" class="navbsociallink"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+
+          <!-- Call Block (Desktop Only) -->
+          <a
+            href="tel:+9186630453040"
+            class="navbcontactblock"
+            id="navbcallbutton"
+          >
+            <div class="navbdialiconarea">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="navbcontactinfo">
+              <span class="navbcalltext">Call Us Now</span>
+              <span class="navbphonenumber">+91 86630453040</span>
+            </div>
+          </a>
+
+          <!-- Hamburger (Mobile Only) -->
+          <button
+            class="navbhamburger"
+            id="navbhamburgerbtn"
+            aria-label="Open Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="navbmobileoverlay" id="navbmobilemenu">
+      <button class="navbmobileclose" id="navbclosebtn">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <ul class="navbmobilelinks">
+        <li><a href="./index.html" class="navbmobileitem">Home</a></li>
+        <li><a href="./services.html" class="navbmobileitem">Services</a></li>
+        <li><a href="./about.html" class="navbmobileitem">About Us</a></li>
+        <li><a href="./gallery.html" class="navbmobileitem">Gallery</a></li>
+        <li><a href="./contact.html" class="navbmobileitem">Contact</a></li>
+      </ul>
+
+      <div class="navbmobilesocials">
+        <a href="https://wa.me/9186630453040" class="navbmobilesociallink"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://www.facebook.com/" class="navbmobilesociallink"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/" class="navbmobilesociallink"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/" class="navbmobilesociallink"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </div>
+    <main>
+      <!-- SECTION 1: HERO -->
+      <section class="srvHeroSection">
+        <div class="srvHeroGrid">
+          <div class="srvHeroContent">
+            <nav class="srvBreadcrumb" aria-label="Breadcrumb">
+              HOME <i class="fas fa-chevron-right" style="font-size: 8px"></i>
+              <span>OUR SERVICES</span>
+            </nav>
+            <h1 class="srvHeroTitle">OUR SERVICES</h1>
+            <p
+              style="
+                margin-top: 20px;
+                font-size: 1.1rem;
+                max-width: 550px;
+                opacity: 0.9;
+              "
+            >
+              Sugar City Ambulance Services provides gold-standard medical
+              transportation and critical care support across
+              <strong>Mandya</strong> and <strong>Mysore</strong>.
+            </p>
+          </div>
+          <div
+            class="srvHeroImgWrapper"
+            role="img"
+            aria-label="Sugar City Emergency Ambulance"
+          ></div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: SERVICES GRID -->
+      <section class="srvGridSection">
+        <div class="srvContainer">
+          <header class="srvSectionHeader srvReveal">
+            <h2>Emergency Medical & Ambulance Services</h2>
+            <p>
+              We offer a comprehensive fleet for every medical need. Whether you
+              require a standard <strong>ambulance service in Mandya</strong> or
+              a specialized <strong>ICU ventilator ambulance in Mysore</strong>,
+              our team is equipped for life-saving interventions 24/7.
+            </p>
+          </header>
+
+          <div class="srvMainGrid">
+            <!-- Service 1 -->
+            <article
+              class="srvCard srvReveal"
+              onclick="window.location.href = 'contact.html'"
+            >
+              <svg class="srvCardIcon" viewBox="0 0 24 24">
+                <path
+                  d="M18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5M19.5,12H18V13.5H17V12H15.5V11H17V9.5H18V11H19.5V12M6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5M17,8H15V13H14V5H12V3H2V17H3.09C3.04,17.33 3,17.66 3,18A3,3 0 0,0 6,21A3,3 0 0,0 9,18C9,17.66 8.96,17.33 8.91,17H15.09C15.04,17.33 15,17.66 15,18A3,3 0 0,0 18,21A3,3 0 0,0 21,18C21,17.66 20.96,17.33 20.91,17H22V13L17,8Z"
+                />
+              </svg>
+              <h3>Ambulance Service</h3>
+              <p>
+                Standard basic life support (BLS) for non-critical patient
+                transfers and hospital visits.
+              </p>
+              <div class="srvCardCta">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </div>
+            </article>
+
+            <!-- Service 2 -->
+            <article
+              class="srvCard srvReveal"
+              onclick="window.location.href = 'contact.html'"
+            >
+              <svg class="srvCardIcon" viewBox="0 0 24 24">
+                <path
+                  d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,6H13V11H18V13H13V18H11V13H6V11H11V6Z"
+                />
+              </svg>
+              <h3>Ventilator Ambulance</h3>
+              <p>
+                High-end transport equipped with advanced ventilators for
+                respiratory-distressed patients.
+              </p>
+              <div class="srvCardCta">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </div>
+            </article>
+
+            <!-- Service 3 -->
+            <article
+              class="srvCard srvReveal"
+              onclick="window.location.href = 'contact.html'"
+            >
+              <svg class="srvCardIcon" viewBox="0 0 24 24">
+                <path d="M3,5V19L11,12L3,5M13,19V5L21,12L13,19Z" />
+              </svg>
+              <h3>ICU Setup in Ambulance</h3>
+              <p>
+                Mobile Intensive Care Unit (MICU) with cardiac monitors and
+                multi-para systems.
+              </p>
+              <div class="srvCardCta">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </div>
+            </article>
+
+            <!-- Service 4 -->
+            <article
+              class="srvCard srvReveal"
+              onclick="window.location.href = 'contact.html'"
+            >
+              <svg class="srvCardIcon" viewBox="0 0 24 24">
+                <path
+                  d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16,11H13V8H11V11H8V13H11V16H13V13H16V11Z"
+                />
+              </svg>
+              <h3>Oxygen Ambulance</h3>
+              <p>
+                Dedicated ambulances with continuous high-flow oxygen support
+                for stable transfers.
+              </p>
+              <div class="srvCardCta">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </div>
+            </article>
+
+            <!-- Service 5 -->
+            <article
+              class="srvCard srvReveal"
+              onclick="window.location.href = 'contact.html'"
+            >
+              <svg class="srvCardIcon" viewBox="0 0 24 24">
+                <path
+                  d="M18.92,6.01C18.72,5.42 18.16,5 17.5,5H6.5C5.84,5 5.28,5.42 5.08,6.01L3,12V20A1,1 0 0,0 4,21H5A1,1 0 0,0 6,20V19H18V20A1,1 0 0,0 19,21H20A1,1 0 0,0 21,20V12L18.92,6.01M6.5,16A1.5,1.5 0 1,1 8,14.5A1.5,1.5 0 0,1 6.5,16M17.5,16A1.5,1.5 0 1,1 19,14.5A1.5,1.5 0 0,1 17.5,16M5,11L6.5,6.5H17.5L19,11H5Z"
+                />
+              </svg>
+              <h3>Cab Service</h3>
+              <p>
+                Patient drop and pick-up services for routine checkups and
+                post-discharge recovery.
+              </p>
+              <div class="srvCardCta">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </div>
+            </article>
+
+            <!-- Service 6 -->
+            <article
+              class="srvCard srvReveal"
+              onclick="window.location.href = 'contact.html'"
+            >
+              <svg class="srvCardIcon" viewBox="0 0 24 24">
+                <path
+                  d="M19,4H5A2,2 0 0,0 3,6V18A2,2 0 0,0 5,20H19A2,2 0 0,0 21,18V6A2,2 0 0,0 19,4M19,18H5V6H19V18M7,8H17V10H7V8M7,12H17V14H7V12M7,16H13V18H7V16Z"
+                />
+              </svg>
+              <h3>Dead Body Freezer</h3>
+              <p>
+                Mobile freezer box services for dignified preservation and
+                long-distance transport.
+              </p>
+              <div class="srvCardCta">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </div>
+            </article>
+
+            <!-- Service 7 -->
+            <article
+              class="srvCard srvReveal"
+              onclick="window.location.href = 'contact.html'"
+            >
+              <svg class="srvCardIcon" viewBox="0 0 24 24">
+                <path
+                  d="M13,2V22H11V2H13M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16Z"
+                />
+              </svg>
+              <h3>Oxygen Concentrator</h3>
+              <p>
+                Rental and sales of high-efficiency oxygen concentrators for
+                home care patients.
+              </p>
+              <div class="srvCardCta">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </div>
+            </article>
+
+            <!-- Service 8 -->
+            <article
+              class="srvCard srvReveal"
+              onclick="window.location.href = 'contact.html'"
+            >
+              <svg class="srvCardIcon" viewBox="0 0 24 24">
+                <path
+                  d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                />
+              </svg>
+              <h3>Emergency Transfer</h3>
+              <p>
+                Inter-hospital transfers with professional paramedical staff for
+                critical shifting.
+              </p>
+              <div class="srvCardCta">
+                Learn More <i class="fas fa-arrow-right"></i>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: HOW TO AVAIL -->
+      <section class="srvProcessSection">
+        <div class="srvContainer">
+          <header class="srvSectionHeader srvReveal">
+            <h2>How to Avail Our Services?</h2>
+            <p>
+              Experience <strong>fast ambulance response</strong> times. Our
+              workflow is designed to reduce delays and initiate
+              <strong>24/7 ambulance support</strong> immediately upon your
+              call.
+            </p>
+          </header>
+
+          <div class="srvProcessFlow">
+            <div class="srvStep srvReveal">
+              <div class="srvStepCircle">
+                <i class="fas fa-phone-alt fa-2x"></i>
+                <div class="srvStepNum">1</div>
+              </div>
+              <h4>Call For Emergency</h4>
+              <p>
+                Dial our 24/7 hotline. Our dispatchers are ready to assist
+                instantly.
+              </p>
+            </div>
+
+            <div class="srvStep srvReveal">
+              <div class="srvStepCircle">
+                <i class="fas fa-file-medical fa-2x"></i>
+                <div class="srvStepNum">2</div>
+              </div>
+              <h4>Share Requirement</h4>
+              <p>
+                Provide the patient's condition (ICU, Ventilator, or Basic
+                transport).
+              </p>
+            </div>
+
+            <div class="srvStep srvReveal">
+              <div class="srvStepCircle">
+                <i class="fas fa-shipping-fast fa-2x"></i>
+                <div class="srvStepNum">3</div>
+              </div>
+              <h4>Quick Dispatch</h4>
+              <p>
+                Our nearest ambulance is triggered for rapid arrival at your
+                location.
+              </p>
+            </div>
+
+            <div class="srvStep srvReveal">
+              <div class="srvStepCircle">
+                <i class="fas fa-user-md fa-2x"></i>
+                <div class="srvStepNum">4</div>
+              </div>
+              <h4>Continuous Care</h4>
+              <p>
+                Paramedics provide bedside-to-bedside support throughout the
+                journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: KEY ADVANTAGES -->
+      <section class="srvAdvantageSection">
+        <div class="srvContainer">
+          <header class="srvSectionHeader srvReveal">
+            <h2>Key Advantages of Our Services</h2>
+          </header>
+
+          <div class="srvAdvantageWrapper">
+            <div class="srvAdvColumn">
+              <div class="srvAdvItem srvRightAlign srvReveal">
+                <div class="srvAdvIcon">
+                  <i class="fas fa-monitor-heart-rate"></i>
+                </div>
+                <div class="srvAdvText">
+                  <h5>Advanced ICU Setup</h5>
+                  <p>Equipped with state-of-the-art life support monitors.</p>
+                </div>
+              </div>
+              <div class="srvAdvItem srvRightAlign srvReveal">
+                <div class="srvAdvIcon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <div class="srvAdvText">
+                  <h5>Fast Emergency Response</h5>
+                  <p>Optimized routing to reach patients in record time.</p>
+                </div>
+              </div>
+              <div class="srvAdvItem srvRightAlign srvReveal">
+                <div class="srvAdvIcon"><i class="fas fa-lungs"></i></div>
+                <div class="srvAdvText">
+                  <h5>Oxygen Support Systems</h5>
+                  <p>Continuous high-flow oxygen for critical stability.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="srvAdvCenterImg srvReveal">
+              <img
+                src="./assets/ambul.webp"
+                alt="Sugar City Advanced Ambulance"
+              />
+            </div>
+
+            <div class="srvAdvColumn">
+              <div class="srvAdvItem srvReveal">
+                <div class="srvAdvIcon"><i class="fas fa-user-nurse"></i></div>
+                <div class="srvAdvText">
+                  <h5>Experienced Staff</h5>
+                  <p>Certified paramedics trained in emergency trauma care.</p>
+                </div>
+              </div>
+              <div class="srvAdvItem srvReveal">
+                <div class="srvAdvIcon"><i class="fas fa-clock"></i></div>
+                <div class="srvAdvText">
+                  <h5>24/7 Availability</h5>
+                  <p>Round-the-clock dispatch across Mandya & Mysore.</p>
+                </div>
+              </div>
+              <div class="srvAdvItem srvReveal">
+                <div class="srvAdvIcon"><i class="fas fa-shield-alt"></i></div>
+                <div class="srvAdvText">
+                  <h5>Reliable Transport</h5>
+                  <p>Safe, sanitized, and highly dependable fleet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: CTA -->
+      <section class="srvCtaSection">
+        <div class="srvContainer srvCtaContent">
+          <h2 class="srvReveal">Need Emergency Ambulance Assistance?</h2>
+          <p class="srvReveal">
+            Get the most reliable
+            <strong>ICU ambulance service in Mandya</strong> and Mysore. We are
+            just one call away from saving a life.
+          </p>
+          <div class="srvReveal">
+            <a href="tel:+9186630453040" class="srvCtaBtn">CONTACT NOW</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="ftrMainFooter"
+      itemscope
+      itemtype="http://schema.org/LocalBusiness"
+    >
+      <div class="ftrContainer">
+        <div class="ftrGrid">
+          <!-- COLUMN 1: BRAND -->
+          <div class="ftrBrandBox">
+            <img
+              src="./assets/logoo.webp"
+              alt="Sugar City Ambulance Services Logo"
+              class="ftrLogo"
+              loading="lazy"
+              onclick="window.location.href = 'index.html'"
+              style="cursor: pointer"
+            />
+            <h2 itemprop="name">Sugar City Ambulance</h2>
+            <p itemprop="description">
+              Premium 24/7
+              <strong>emergency ambulance service</strong> providing life-saving
+              medical transport. We specialize in
+              <strong>ICU ambulance</strong> and
+              <strong>ventilator ambulance</strong> support, serving
+              <strong>KM Doddi</strong>, <strong>Bharathi Nagar</strong>,
+              <strong>Malavalli</strong>, and the wider Mandya region.
+            </p>
+          </div>
+
+          <!-- COLUMN 2: FIND US (MAP) -->
+          <div class="ftrMapCol">
+            <h3 class="ftrColTitle">Find Us</h3>
+            <div class="ftrMapWrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.4707038342435!2d77.03322127411234!3d12.484929325363275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf070004d851d7%3A0xc15f18c7130c5ee3!2sSugar%20City%20ambulance%20service!5e0!3m2!1sen!2sin!4v1778396713061!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Sugar City Ambulance Location"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: QR SECTION -->
+          <div class="ftrQrCol">
+            <h3 class="ftrColTitle">Quick Contact</h3>
+            <div class="ftrQrBox">
+              <img
+                src="./assets/QR.webp"
+                alt="Scan to Call"
+                class="ftrQrImage"
+                loading="lazy"
+              />
+              <p>Scan to get Location</p>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: CONTACT -->
+          <div class="ftrContactCol">
+            <h3 class="ftrColTitle">Emergency Links</h3>
+            <ul class="ftrContactList">
+              <li
+                class="ftrContactItem"
+                itemprop="address"
+                itemscope
+                itemtype="http://schema.org/PostalAddress"
+              >
+                <div class="ftrContactIcon">
+                  <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Headquarters</h4>
+                  <span itemprop="streetAddress">Bharathi Nagar, KM Doddi</span>
+                  <span itemprop="addressLocality">Mandya, Karnataka</span>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>24/7 Helpline</h4>
+                  <a href="tel:+9186630453040" itemprop="telephone"
+                    >+91 86630453040</a
+                  >
+                  <br />
+                  <a href="tel:+919740855109" itemprop="telephone"
+                    >+91 9740855109</a
+                  ><br />
+                  <a href="tel:+918105980578" itemprop="telephone"
+                    >+91 8105980578</a
+                  >
+                  <div class="ftrEmergencyTag">Emergency Ready</div>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Email</h4>
+                  <a href="mailto:sugarcityambulance@gmail.com" itemprop="email"
+                    >sugarcityambulance@gmail.com</a
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div class="ftrSocialLinks">
+              <a
+                href="https://wa.me/86630453040"
+                class="ftrSocialBtn"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/"
+                class="ftrSocialBtn"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                class="ftrSocialBtn"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/"
+                class="ftrSocialBtn"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="ftrBottomBar">
+        <div class="ftrContainer">
+          <div class="ftrBottomFlex">
+            <p>
+              &copy; <span id="ftrYear"></span>
+              <strong>Sugar City Ambulance</strong>. All Rights Reserved.
+            </p>
+            <p>
+              <i
+                class="fas fa-shield-heart"
+                style="color: var(--stkPrimaryRed); margin-right: 5px"
+              ></i>
+              Designed By
+              <a
+                href="https://arouzatechlabs.in/"
+                style="text-decoration: none; color: var(--stkPrimaryRed)"
+                >AROUZA TECHLABS
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GO TO TOP BUTTON -->
+      <div id="ftrBackToTop" title="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </footer>
+    <script src="./navbar.js"></script>
+    <script src="./footer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Intersection Observer for Scroll Reveal
+        const observerOptions = {
+          threshold: 0.15,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("srvVisible");
+            }
+          });
+        }, observerOptions);
+
+        document
+          .querySelectorAll(".srvReveal")
+          .forEach((el) => revealObserver.observe(el));
+
+        // Card Hover interactions (extra JS for performance-friendly feedback)
+        const cards = document.querySelectorAll(".srvCard");
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            // Placeholder for potential sound or heavy logic
+          });
+        });
+      });
+    </script>
+
+    <!-- SCHEMA JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Emergency Ambulance Service",
+        "provider": {
+          "@type": "MedicalOrganization",
+          "name": "Sugar City Ambulance Services"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Mandya" },
+          { "@type": "City", "name": "Mysore" },
+          { "@type": "City", "name": "KM Doddi" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Emergency Medical Transport",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Ventilator Ambulance"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "ICU Ambulance" }
+            }
+          ]
+        }
+      }
+    </script>
+  </body>
+</html>

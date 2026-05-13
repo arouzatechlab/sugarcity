@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugar City Ambulance Services | Emergency Navbar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --stkprimaryred: #e30613;
+        --stknavy: #0b0f2b;
+        --stkdeepblue: #050c2f;
+        --stklightbg: #f4f4f6;
+        --stktextgray: #6b7280;
+        --stksoftpink: #fde8ea;
+        --stkwhite: #ffffff;
+        --primary: var(--stkprimaryred);
+        --overlay: rgba(5, 12, 47, 0.98);
+        --navshadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: var(--stklightbg);
+        line-height: 1.6;
+      }
+
+      .navbnoscroll {
+        overflow: hidden;
+      }
+
+      /* Header Container */
+      .navbheader {
+        background-color: var(--stkwhite);
+        height: 80px; /* Mobile height */
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        transition: var(--transition);
+      }
+
+      @media (min-width: 1024px) {
+        .navbheader {
+          height: 110px;
+        }
+      }
+
+      .navbheader.navbsticky {
+        height: 70px;
+        box-shadow: var(--navshadow);
+      }
+
+      @media (min-width: 1024px) {
+        .navbheader.navbsticky {
+          height: 90px;
+        }
+      }
+
+      .navbcontainer {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .navbcontainer {
+          padding: 0 20px;
+        }
+      }
+
+      /* Logo Area */
+      .navblogowrapper {
+        flex-shrink: 1;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        min-width: 0;
+      }
+
+      .navblogowrapper img {
+        height: 55px; /* Scaled for mobile safety */
+        width: auto;
+        max-width: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      @media (min-width: 1024px) {
+        .navblogowrapper img {
+          height: 90px;
+        }
+      }
+
+      /* Desktop Navigation */
+      .navbmenu {
+        display: none;
+        height: 100%;
+        margin: 0 15px;
+      }
+
+      @media (min-width: 1024px) {
+        .navbmenu {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .navbul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      @media (min-width: 1200px) {
+        .navbul {
+          gap: 30px;
+        }
+      }
+
+      .navbul li a {
+        text-decoration: none;
+        color: var(--stkdeepblue);
+        font-weight: 700;
+        font-size: 15px; /* Increased from 13px */
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: var(--transition);
+        position: relative;
+        padding: 5px 0;
+        white-space: nowrap;
+      }
+
+      .navbul li a:hover {
+        color: var(--stkprimaryred);
+      }
+
+      /* Right Actions */
+      .navbrightactions {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-shrink: 0;
+      }
+
+      /* Social Icons (Desktop Only) */
+      .navbsocialswrapper {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        margin-right: 20px;
+      }
+
+      @media (min-width: 1280px) {
+        .navbsocialswrapper {
+          display: flex;
+        }
+      }
+
+      .navbsociallink {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--stklightbg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--stkdeepblue);
+        text-decoration: none;
+        font-size: 15px;
+        transition: var(--transition);
+      }
+
+      .navbsociallink:hover {
+        background-color: var(--stkprimaryred);
+        color: var(--stkwhite);
+        transform: translateY(-2px);
+      }
+
+      /* Red Contact Block */
+      .navbcontactblock {
+        display: flex;
+        background-color: var(--stkprimaryred);
+        height: 100%;
+        padding: 0 10px;
+        align-items: center;
+        text-decoration: none;
+        color: var(--stkwhite);
+        border-bottom-left-radius: 30px;
+        margin-right: 8px;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      @media (min-width: 768px) {
+        .navbcontactblock {
+          padding: 0 30px;
+          border-bottom-left-radius: 50px;
+          margin-right: -20px;
+        }
+      }
+
+      .navbdialiconarea {
+        width: 28px;
+        height: 28px;
+        background-color: var(--stkwhite);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 6px;
+        flex-shrink: 0;
+      }
+
+      @media (min-width: 768px) {
+        .navbdialiconarea {
+          width: 40px;
+          height: 40px;
+          margin-right: 12px;
+        }
+      }
+
+      .navbdialiconarea i {
+        color: var(--stkprimaryred);
+        font-size: 12px;
+      }
+
+      .navbcontactinfo {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .navbcalltext {
+        display: none;
+        font-size: 9px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      @media (min-width: 480px) {
+        .navbcalltext {
+          display: block;
+        }
+      }
+
+      .navbphonenumber {
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      @media (min-width: 768px) {
+        .navbphonenumber {
+          font-size: 18px;
+        }
+      }
+
+      /* Hamburger */
+      .navbhamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 28px;
+        height: 28px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
+        padding: 0;
+        flex-shrink: 0;
+      }
+
+      @media (min-width: 1024px) {
+        .navbhamburger {
+          display: none;
+        }
+      }
+
+      .navbhamburger span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--stkdeepblue);
+        border-radius: 2px;
+      }
+
+      /* Mobile Overlay Menu */
+      .navbmobileoverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--overlay);
+        z-index: 1050;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 40px;
+        transform: translateX(100%);
+        transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        backdrop-filter: blur(15px);
+      }
+
+      .navbmobileoverlay.navbactive {
+        transform: translateX(0);
+      }
+
+      .navbmobileclose {
+        align-self: flex-end;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: var(--stkwhite);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .navbmobilelinks {
+        list-style: none;
+        text-align: left;
+        margin-top: 10px;
+      }
+
+      .navbmobilelinks li {
+        margin: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 12px;
+      }
+
+      .navbmobilelinks li a {
+        color: var(--stkwhite);
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 800;
+        text-transform: uppercase;
+        display: block;
+      }
+
+      /* Mobile Social Icons Section */
+      .navbmobilesocials {
+        margin-top: auto;
+        padding-bottom: 40px;
+        display: flex;
+        gap: 15px;
+      }
+
+      .navbmobilesociallink {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--stkwhite);
+        text-decoration: none;
+        font-size: 20px;
+        transition: var(--transition);
+      }
+
+      .navbmobilesociallink:hover {
+        background-color: var(--stkprimaryred);
+        transform: scale(1.1);
+      }
+
+      /* Hero Adjustment */
+      .navbhero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #050c2f 0%, #0b0f2b 100%);
+        color: white;
+        padding-top: 110px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbheader" id="navbheader">
+      <div class="navbcontainer">
+        <!-- Logo Section -->
+        <a
+          href="#"
+          class="navblogowrapper"
+          aria-label="Sugar City Ambulance Home"
+        >
+          <img
+            src="./assets/logo.webp"
+            alt="Sugar City Ambulance Services Logo"
+            id="navblogoid"
+          />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbmenu" id="navbmenuwrapper">
+          <ul class="navbul">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="navbrightactions">
+          <div class="navbsocialswrapper">
+            <a href="#" class="navbsociallink"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="#" class="navbsociallink"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="navbsociallink"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="navbsociallink"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+
+          <!-- Call Block -->
+          <a
+            href="tel:+880123456789"
+            class="navbcontactblock"
+            id="navbcallbutton"
+          >
+            <div class="navbdialiconarea">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="navbcontactinfo">
+              <span class="navbcalltext">Call Us Now</span>
+              <span class="navbphonenumber">+880 123 456 789</span>
+            </div>
+          </a>
+
+          <!-- Hamburger -->
+          <button
+            class="navbhamburger"
+            id="navbhamburgerbtn"
+            aria-label="Open Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="navbmobileoverlay" id="navbmobilemenu">
+      <button class="navbmobileclose" id="navbclosebtn">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <ul class="navbmobilelinks">
+        <li><a href="#home" class="navbmobileitem">Home</a></li>
+        <li><a href="#services" class="navbmobileitem">Services</a></li>
+        <li><a href="#about" class="navbmobileitem">About Us</a></li>
+        <li><a href="#gallery" class="navbmobileitem">Gallery</a></li>
+        <li><a href="#contact" class="navbmobileitem">Contact</a></li>
+      </ul>
+
+      <!-- Social Media Icons in Mobile Menu -->
+      <div class="navbmobilesocials">
+        <a href="#" class="navbmobilesociallink"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="#" class="navbmobilesociallink"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="#" class="navbmobilesociallink"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="navbmobilesociallink"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </div>
+
+    <main>
+      <section class="navbhero" id="home">
+        <div>
+          <h1>24/7 Emergency Medical Response</h1>
+          <p>Sugar City Ambulance Services - Your life is our priority.</p>
+        </div>
+      </section>
+      <div style="height: 1000px; background: white"></div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navbheader = document.getElementById("navbheader");
+        const navbhamburgerbtn = document.getElementById("navbhamburgerbtn");
+        const navbmobilemenu = document.getElementById("navbmobilemenu");
+        const navbclosebtn = document.getElementById("navbclosebtn");
+        const navbmobileitems = document.querySelectorAll(".navbmobileitem");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 30) {
+            navbheader.classList.add("navbsticky");
+          } else {
+            navbheader.classList.remove("navbsticky");
+          }
+        });
+
+        navbhamburgerbtn.addEventListener("click", () => {
+          navbmobilemenu.classList.add("navbactive");
+          document.body.classList.add("navbnoscroll");
+        });
+
+        const closeMenu = () => {
+          navbmobilemenu.classList.remove("navbactive");
+          document.body.classList.remove("navbnoscroll");
+        };
+
+        navbclosebtn.addEventListener("click", closeMenu);
+        navbmobileitems.forEach((item) =>
+          item.addEventListener("click", closeMenu),
+        );
+      });
+    </script>
+  </body>
+</html>

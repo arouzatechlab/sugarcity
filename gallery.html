@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PRIMARY SEO TAGS - Optimized for Priority: KM Doddi -> Mysore -->
+    <title>
+      24/7 Ambulance Gallery | KM Doddi (Bharathinagar), Malavalli & Maddur |
+      Sugar City
+    </title>
+    <meta
+      name="description"
+      content="Sugar City Ambulance fleet gallery. Premier ICU & Ventilator ambulance services in KM Doddi (Bharathinagar), Malavalli, Maddur, Mandya, and Mysore. 24/7 rapid medical response."
+    />
+    <meta
+      name="keywords"
+      content="Ambulance service KM Doddi, Bharathinagar ambulance, Malavalli ICU ambulance, Maddur emergency transport, Mandya ventilator ambulance, Mysore medical shifting, Sugar City Ambulance fleet"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <style>
+      :root {
+        --stkPrimaryRed: #e30613;
+        --stkNavy: #0b0f2b;
+        --stkDeepBlue: #050c2f;
+        --stkLightBg: #f4f4f6;
+        --stkTextGray: #6b7280;
+        --stkWhite: #ffffff;
+        --galTransition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        border-radius: 0 !important; /* Medical professional sharp edges */
+      }
+
+      body {
+        background-color: var(--stkWhite);
+        color: var(--stkDeepBlue);
+        overflow-x: hidden;
+      }
+
+      /* HERO SECTION */
+
+      .galHero {
+        position: relative;
+        width: 100%;
+        min-height: 320px;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+
+        background-image: url("./assets/hero.webp");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* DARK OVERLAY */
+
+      .galHero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(
+          rgba(5, 12, 47, 0.78),
+          rgba(5, 12, 47, 0.78)
+        );
+
+        z-index: 1;
+      }
+
+      /* OPTIONAL EXTRA DARK LAYER */
+
+      .galHero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.2);
+
+        z-index: 2;
+      }
+
+      /* CONTENT */
+
+      .galHeroContent {
+        position: relative;
+        z-index: 5;
+
+        width: 100%;
+        max-width: 1000px;
+
+        padding: 20px;
+      }
+      /* MOBILE HERO NAVBAR GAP FIX */
+
+      @media (max-width: 1023px) {
+        .galHero {
+          padding-top: 105px;
+        }
+
+        .galHeroContent {
+          padding-top: 40px;
+        }
+      }
+      /* BREADCRUMB */
+
+      .galBreadcrumb {
+        color: var(--stkWhite);
+
+        font-size: 0.85rem;
+        font-weight: 600;
+
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        margin-bottom: 15px;
+      }
+
+      .galBreadcrumb span {
+        color: var(--stkPrimaryRed);
+      }
+
+      /* TITLE */
+
+      .galHeroTitle {
+        font-size: 2.3rem;
+        font-weight: 900;
+
+        line-height: 1.1;
+        text-transform: uppercase;
+
+        color: var(--stkWhite);
+
+        text-shadow:
+          0 2px 10px rgba(0, 0, 0, 0.5),
+          0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* HIGHLIGHT TEXT */
+
+      .galHeroTitle strong {
+        color: var(--stkPrimaryRed);
+      }
+
+      /* TABLET */
+
+      @media (min-width: 768px) {
+        .galHero {
+          min-height: 420px;
+        }
+
+        .galHeroTitle {
+          font-size: 4rem;
+        }
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 1200px) {
+        .galHero {
+          min-height: 500px;
+        }
+
+        .galHeroTitle {
+          font-size: 5rem;
+        }
+      }
+
+      .galFilterBar {
+        background: var(--stkNavy);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .filterBtn {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 10px 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: var(--galTransition);
+      }
+
+      .filterBtn.active,
+      .filterBtn:hover {
+        background: var(--stkPrimaryRed);
+        border-color: var(--stkPrimaryRed);
+      }
+
+      .galGalleryWrapper {
+        background-color: var(--stkLightBg);
+        padding: 60px 20px;
+      }
+
+      .galGrid {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .galItem {
+        position: relative;
+        background: var(--stkWhite);
+        border: 1px solid #ddd;
+        cursor: pointer;
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        transition: var(--galTransition);
+      }
+
+      .galItem img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .galItem:hover img {
+        transform: scale(1.1);
+      }
+
+      .galItem:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+      }
+
+      .galItemInfo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(transparent, rgba(5, 12, 47, 0.9));
+        color: white;
+        opacity: 0;
+        transition: var(--galTransition);
+      }
+
+      .galItem:hover .galItemInfo {
+        opacity: 1;
+      }
+
+      .galLocTag {
+        font-size: 0.65rem;
+        font-weight: 800;
+        background: var(--stkPrimaryRed);
+        padding: 3px 8px;
+        margin-bottom: 5px;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+
+      .galItemTitle {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .galLightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(5, 12, 47, 0.98);
+        z-index: 2000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+      }
+
+      .galLightbox.active {
+        display: flex;
+      }
+
+      .galLightboxContent {
+        max-width: 1000px;
+        width: 100%;
+        position: relative;
+        background: var(--stkWhite);
+        border: 8px solid var(--stkNavy);
+      }
+
+      .galLightboxMedia {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 80vh;
+        object-fit: contain;
+      }
+
+      .galClose {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--stkPrimaryRed);
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 24px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--galTransition);
+      }
+
+      .galClose:hover {
+        background: var(--stkNavy);
+      }
+
+      .galCaption {
+        padding: 20px;
+        background: var(--stkNavy);
+        color: white;
+      }
+
+      .galCaption h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: var(--stkPrimaryRed);
+        text-transform: uppercase;
+      }
+      .galCaption p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        line-height: 1.4;
+      }
+
+      @media (max-width: 768px) {
+        .galHeroTitle {
+          font-size: 2rem;
+        }
+        .galGrid {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Topbar -->
+    <div class="navbtopbar" id="navbtopbar">
+      <a href="tel:+9186630453040">
+        <i class="fas fa-phone-alt"></i>
+        <span>+91 86630453040</span>
+      </a>
+    </div>
+
+    <header class="navbheader" id="navbheader">
+      <div class="navbcontainer">
+        <!-- Logo & Text Section -->
+        <a
+          href="./index.html"
+          class="navblogowrapper"
+          aria-label="Sugar City Ambulance Home"
+        >
+          <img
+            src="./assets/logo.webp"
+            alt="Sugar City Ambulance Services Logo"
+            id="navblogoid"
+          />
+          <div class="navbbrandtext">
+            <span class="navbbrandtitle">Sugar City</span>
+            <span class="navbbrandsubtitle">Ambulance Services</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbmenu" id="navbmenuwrapper">
+          <ul class="navbul">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="navbrightactions">
+          <div class="navbsocialswrapper">
+            <a href="https://wa.me/9186630453040" class="navbsociallink"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://www.facebook.com/" class="navbsociallink"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/" class="navbsociallink"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/" class="navbsociallink"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+
+          <!-- Call Block (Desktop Only) -->
+          <a
+            href="tel:+9186630453040"
+            class="navbcontactblock"
+            id="navbcallbutton"
+          >
+            <div class="navbdialiconarea">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="navbcontactinfo">
+              <span class="navbcalltext">Call Us Now</span>
+              <span class="navbphonenumber">+91 86630453040</span>
+            </div>
+          </a>
+
+          <!-- Hamburger (Mobile Only) -->
+          <button
+            class="navbhamburger"
+            id="navbhamburgerbtn"
+            aria-label="Open Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="navbmobileoverlay" id="navbmobilemenu">
+      <button class="navbmobileclose" id="navbclosebtn">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <ul class="navbmobilelinks">
+        <li><a href="./index.html" class="navbmobileitem">Home</a></li>
+        <li><a href="./services.html" class="navbmobileitem">Services</a></li>
+        <li><a href="./about.html" class="navbmobileitem">About Us</a></li>
+        <li><a href="./gallery.html" class="navbmobileitem">Gallery</a></li>
+        <li><a href="./contact.html" class="navbmobileitem">Contact</a></li>
+      </ul>
+
+      <div class="navbmobilesocials">
+        <a href="https://wa.me/9186630453040" class="navbmobilesociallink"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://www.facebook.com/" class="navbmobilesociallink"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/" class="navbmobilesociallink"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/" class="navbmobilesociallink"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </div>
+    <!-- SECTION 1: HERO SECTION - STRATEGIC SEO PRIORITY -->
+    <section class="galHero">
+      <div class="galHeroContent">
+        <div class="galBreadcrumb">HOME <span>></span> GALLERY</div>
+
+        <h1 class="galHeroTitle">
+          OUR GALLERY <br />
+          <strong>AMBULANCE FLEET</strong>
+        </h1>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SEO INTRO -->
+    <div
+      style="
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      "
+    >
+      <p
+        style="
+          color: var(--stkPrimaryRed);
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 10px;
+        "
+      >
+        Authorized Regional Support
+      </p>
+      <h2
+        style="
+          font-weight: 800;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          font-size: 1.8rem;
+        "
+      >
+        Emergency Response Network
+      </h2>
+      <p style="color: var(--stkTextGray); line-height: 1.8">
+        Sugar City Ambulance provides the most comprehensive medical
+        transportation network starting from our primary hub in
+        <strong>KM Doddi (Bharathinagar)</strong>. We extend our expert 24/7
+        services to <strong>Malavalli</strong>, <strong>Maddur</strong>,
+        <strong>Mandya</strong>, and <strong>Mysore</strong>. Our 30+
+        specialized units include ICU ventilators, cardiac response teams, and
+        neonatal transport systems, ensuring critical care during every
+        kilometer of the journey.
+      </p>
+    </div>
+
+    <div class="galFilterBar">
+      <button class="filterBtn active" data-filter="all">All Fleet</button>
+      <button class="filterBtn" data-filter="kmdoddi">KM Doddi Units</button>
+      <button class="filterBtn" data-filter="malavalli">
+        Malavalli Response
+      </button>
+      <button class="filterBtn" data-filter="maddur">Maddur Support</button>
+      <button class="filterBtn" data-filter="mandya">Mandya Fleet</button>
+      <button class="filterBtn" data-filter="mysore">Mysore Transfer</button>
+    </div>
+
+    <!-- SECTION 3: 30-IMAGE GALLERY GRID -->
+    <main class="galGalleryWrapper">
+      <div class="galGrid" id="mainGrid">
+        <!-- Items will be generated via JS for clean management, but SEO content is embedded in data attributes -->
+      </div>
+    </main>
+
+    <!-- SECTION 4: LIGHTBOX -->
+    <div class="galLightbox" id="galLightbox">
+      <div class="galLightboxContent">
+        <button class="galClose" id="galClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <img
+          id="lbImg"
+          class="galLightboxMedia"
+          src=""
+          alt="Sugar City Ambulance"
+        />
+        <div class="galCaption">
+          <h3 id="lbTitle"></h3>
+          <p id="lbDesc"></p>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="ftrMainFooter"
+      itemscope
+      itemtype="http://schema.org/LocalBusiness"
+    >
+      <div class="ftrContainer">
+        <div class="ftrGrid">
+          <!-- COLUMN 1: BRAND -->
+          <div class="ftrBrandBox">
+            <img
+              src="./assets/logoo.webp"
+              alt="Sugar City Ambulance Services Logo"
+              class="ftrLogo"
+              loading="lazy"
+              onclick="window.location.href = 'index.html'"
+              style="cursor: pointer"
+            />
+            <h2 itemprop="name">Sugar City Ambulance</h2>
+            <p itemprop="description">
+              Premium 24/7
+              <strong>emergency ambulance service</strong> providing life-saving
+              medical transport. We specialize in
+              <strong>ICU ambulance</strong> and
+              <strong>ventilator ambulance</strong> support, serving
+              <strong>KM Doddi</strong>, <strong>Bharathi Nagar</strong>,
+              <strong>Malavalli</strong>, and the wider Mandya region.
+            </p>
+          </div>
+
+          <!-- COLUMN 2: FIND US (MAP) -->
+          <div class="ftrMapCol">
+            <h3 class="ftrColTitle">Find Us</h3>
+            <div class="ftrMapWrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.4707038342435!2d77.03322127411234!3d12.484929325363275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf070004d851d7%3A0xc15f18c7130c5ee3!2sSugar%20City%20ambulance%20service!5e0!3m2!1sen!2sin!4v1778396713061!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Sugar City Ambulance Location"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: QR SECTION -->
+          <div class="ftrQrCol">
+            <h3 class="ftrColTitle">Quick Contact</h3>
+            <div class="ftrQrBox">
+              <img
+                src="./assets/QR.webp"
+                alt="Scan to Call"
+                class="ftrQrImage"
+                loading="lazy"
+              />
+              <p>Scan to get Location</p>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: CONTACT -->
+          <div class="ftrContactCol">
+            <h3 class="ftrColTitle">Emergency Links</h3>
+            <ul class="ftrContactList">
+              <li
+                class="ftrContactItem"
+                itemprop="address"
+                itemscope
+                itemtype="http://schema.org/PostalAddress"
+              >
+                <div class="ftrContactIcon">
+                  <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Headquarters</h4>
+                  <span itemprop="streetAddress">Bharathi Nagar, KM Doddi</span>
+                  <span itemprop="addressLocality">Mandya, Karnataka</span>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>24/7 Helpline</h4>
+                  <a href="tel:+9186630453040" itemprop="telephone"
+                    >+91 86630453040</a
+                  >
+                  <br />
+                  <a href="tel:+919740855109" itemprop="telephone"
+                    >+91 9740855109</a
+                  ><br />
+                  <a href="tel:+918105980578" itemprop="telephone"
+                    >+91 8105980578</a
+                  >
+                  <div class="ftrEmergencyTag">Emergency Ready</div>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Email</h4>
+                  <a href="mailto:sugarcityambulance@gmail.com" itemprop="email"
+                    >sugarcityambulance@gmail.com</a
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div class="ftrSocialLinks">
+              <a
+                href="https://wa.me/86630453040"
+                class="ftrSocialBtn"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/"
+                class="ftrSocialBtn"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                class="ftrSocialBtn"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/"
+                class="ftrSocialBtn"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="ftrBottomBar">
+        <div class="ftrContainer">
+          <div class="ftrBottomFlex">
+            <p>
+              &copy; <span id="ftrYear"></span>
+              <strong>Sugar City Ambulance</strong>. All Rights Reserved.
+            </p>
+            <p>
+              <i
+                class="fas fa-shield-heart"
+                style="color: var(--stkPrimaryRed); margin-right: 5px"
+              ></i>
+              Designed By
+              <a
+                href="https://arouzatechlabs.in/"
+                style="text-decoration: none; color: var(--stkPrimaryRed)"
+                >AROUZA TECHLABS
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GO TO TOP BUTTON -->
+      <div id="ftrBackToTop" title="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </footer>
+    <script src="./navbar.js"></script>
+    <script src="./footer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.getElementById("mainGrid");
+
+        // 30 GALLERY ITEMS DATA - Strategically tagged for SEO
+        const galleryData = [
+          // PRIORITY 1: KM DODDI / BHARATHINAGAR (1-8)
+          {
+            id: 1,
+            cat: "kmdoddi",
+            title: "Primary ICU Unit",
+            loc: "KM Doddi",
+            desc: "Our flagship ICU ambulance stationed permanently at KM Doddi Bharathinagar for 24/7 critical response.",
+            img: "https://images.unsplash.com/photo-1587350846564-c00973f8a74c?q=80&w=800",
+          },
+          {
+            id: 2,
+            cat: "kmdoddi",
+            title: "Advanced Ventilator Support",
+            loc: "Bharathinagar",
+            desc: "Equipped with Hamilton-C1 ventilators, serving the Bharathinagar community with life-saving equipment.",
+            img: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=800",
+          },
+          {
+            id: 3,
+            cat: "kmdoddi",
+            title: "Cardiac Emergency Team",
+            loc: "KM Doddi",
+            desc: "Specialized cardiac response unit with AED and Multipara monitoring for KM Doddi residents.",
+            img: "https://images.unsplash.com/photo-1559839734-2b71f1e59816?q=80&w=800",
+          },
+          {
+            id: 4,
+            cat: "kmdoddi",
+            title: "Neonatal Transport",
+            loc: "KM Doddi",
+            desc: "Safe incubator transport for infants from KM Doddi to specialized hospitals in Mysore.",
+            img: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=800",
+          },
+          {
+            id: 5,
+            cat: "kmdoddi",
+            title: "Night Response Fleet",
+            loc: "Bharathinagar",
+            desc: "Illuminated high-visibility emergency units for night calls in Bharathinagar region.",
+            img: "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?q=80&w=800",
+          },
+          {
+            id: 6,
+            cat: "kmdoddi",
+            title: "Emergency Dispatch Hub",
+            loc: "KM Doddi",
+            desc: "Our central coordination office managing ambulance logistics for KM Doddi and Malavalli.",
+            img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800",
+          },
+          {
+            id: 7,
+            cat: "kmdoddi",
+            title: "Oxygen Backup Unit",
+            loc: "KM Doddi",
+            desc: "Ambulance fitted with bulk medical oxygen systems for prolonged patient transport.",
+            img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800",
+          },
+          {
+            id: 8,
+            cat: "kmdoddi",
+            title: "Trauma Care Vehicle",
+            loc: "Bharathinagar",
+            desc: "Specialized trauma stabilization unit serving the KM Doddi-Maddur highway.",
+            img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=800",
+          },
+
+          // PRIORITY 2: MALAVALLI (9-14)
+          {
+            id: 9,
+            cat: "malavalli",
+            title: "Malavalli Express Unit",
+            loc: "Malavalli",
+            desc: "Rapid response unit stationed in Malavalli for immediate urban and rural medical pickup.",
+            img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800",
+          },
+          {
+            id: 10,
+            cat: "malavalli",
+            title: "Basic Life Support",
+            loc: "Malavalli",
+            desc: "Standard BLS ambulance serving Malavalli taluk for non-critical transfers.",
+            img: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800",
+          },
+          {
+            id: 11,
+            cat: "malavalli",
+            title: "Community Medical Van",
+            loc: "Malavalli",
+            desc: "Providing affordable medical transport to rural villages surrounding Malavalli.",
+            img: "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=800",
+          },
+          {
+            id: 12,
+            cat: "malavalli",
+            title: "Sterilized Patient Cabin",
+            loc: "Malavalli",
+            desc: "Ultra-clean, infection-controlled ambulance interior for post-op transfers in Malavalli.",
+            img: "https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?q=80&w=800",
+          },
+          {
+            id: 13,
+            cat: "malavalli",
+            title: "Paramedic Hub",
+            loc: "Malavalli",
+            desc: "Our team of certified paramedics ready for dispatch in Malavalli town.",
+            img: "https://images.unsplash.com/photo-1584036561566-baf2418309a0?q=80&w=800",
+          },
+          {
+            id: 14,
+            cat: "malavalli",
+            title: "Malavalli Rural Outreach",
+            loc: "Malavalli",
+            desc: "4x4 capable emergency vehicle for difficult terrain around Malavalli region.",
+            img: "https://images.unsplash.com/photo-1504813184591-01592f25972f?q=80&w=800",
+          },
+
+          // PRIORITY 3: MADDUR (15-20)
+          {
+            id: 15,
+            cat: "maddur",
+            title: "Maddur Station Unit",
+            loc: "Maddur",
+            desc: "Strategic response unit located near Maddur railway station for quick patient access.",
+            img: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?q=80&w=800",
+          },
+          {
+            id: 16,
+            cat: "maddur",
+            title: "Highway Patrol Ambulance",
+            loc: "Maddur",
+            desc: "Monitoring the Maddur highway for accident response and emergency care.",
+            img: "https://images.unsplash.com/photo-1626315535947-f5869046c827?q=80&w=800",
+          },
+          {
+            id: 17,
+            cat: "maddur",
+            title: "Maddur Town Support",
+            loc: "Maddur",
+            desc: "Compact ambulance unit designed for the narrow streets of Maddur town.",
+            img: "https://images.unsplash.com/photo-1502740479796-6299b7af7f67?q=80&w=800",
+          },
+          {
+            id: 18,
+            cat: "maddur",
+            title: "Advanced Monitoring System",
+            loc: "Maddur",
+            desc: "High-end cardiac monitors installed in our Maddur-based units.",
+            img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800",
+          },
+          {
+            id: 19,
+            cat: "maddur",
+            title: "Dialysis Transfer Unit",
+            loc: "Maddur",
+            desc: "Scheduled medical transport for dialysis patients in Maddur and surrounding areas.",
+            img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800",
+          },
+          {
+            id: 20,
+            cat: "maddur",
+            title: "Maddur 24/7 Hotline",
+            loc: "Maddur",
+            desc: "Dedicated emergency dispatch team for the Maddur region.",
+            img: "https://images.unsplash.com/photo-1521791136064-7986c295944b?q=80&w=800",
+          },
+
+          // PRIORITY 4: MANDYA (21-25)
+          {
+            id: 21,
+            cat: "mandya",
+            title: "Mandya District Fleet",
+            loc: "Mandya",
+            desc: "Large capacity ambulance serving the entire Mandya district medical network.",
+            img: "https://images.unsplash.com/photo-1599446706134-66a447846b99?q=80&w=800",
+          },
+          {
+            id: 22,
+            cat: "mandya",
+            title: "Ventilator Fleet Mandya",
+            loc: "Mandya",
+            desc: "Advanced life support units for inter-hospital transfers within Mandya city.",
+            img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800",
+          },
+          {
+            id: 23,
+            cat: "mandya",
+            title: "Mandya Response Team",
+            loc: "Mandya",
+            desc: "Our senior paramedics based at the Mandya central station.",
+            img: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=800",
+          },
+          {
+            id: 24,
+            cat: "mandya",
+            title: "ICU Fleet Expansion",
+            loc: "Mandya",
+            desc: "Newly added high-roof ICU ambulances for Mandya district residents.",
+            img: "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800",
+          },
+          {
+            id: 25,
+            cat: "mandya",
+            title: "Oxygen Supply Hub",
+            loc: "Mandya",
+            desc: "Strategic oxygen refilling station for the Sugar City fleet in Mandya.",
+            img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800",
+          },
+
+          // PRIORITY 5: MYSORE (26-30)
+          {
+            id: 26,
+            cat: "mysore",
+            title: "Mysore Inter-City Unit",
+            loc: "Mysore",
+            desc: "Specialized long-distance ambulance for patient shifting from KM Doddi to Mysore.",
+            img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800",
+          },
+          {
+            id: 27,
+            cat: "mysore",
+            title: "Advanced Mysore Logistics",
+            loc: "Mysore",
+            desc: "Coordination team for receiving patients at major Mysore hospitals.",
+            img: "https://images.unsplash.com/photo-1538108197017-c1a966bd3b74?q=80&w=800",
+          },
+          {
+            id: 28,
+            cat: "mysore",
+            title: "High-Speed Transport",
+            loc: "Mysore",
+            desc: "Powerful engine ambulances for rapid transit between Mandya and Mysore.",
+            img: "https://images.unsplash.com/photo-1551190822-a9333d87dfb1?q=80&w=800",
+          },
+          {
+            id: 29,
+            cat: "mysore",
+            title: "Mysore Hospital Liaison",
+            loc: "Mysore",
+            desc: "Staff dedicated to ensuring smooth admissions for our patients in Mysore.",
+            img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800",
+          },
+          {
+            id: 30,
+            cat: "mysore",
+            title: "Returning Care Fleet",
+            loc: "Mysore",
+            desc: "Reliable transport for patients returning from Mysore back to Bharathinagar.",
+            img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=800",
+          },
+        ];
+
+        function renderGallery(filter = "all") {
+          grid.innerHTML = "";
+          const filtered =
+            filter === "all"
+              ? galleryData
+              : galleryData.filter((d) => d.cat === filter);
+
+          filtered.forEach((item, index) => {
+            const el = document.createElement("article");
+            el.className = "galItem";
+            el.dataset.cat = item.cat;
+            el.innerHTML = `
+                        <img src="${item.img}" alt="${item.title} ${item.loc}">
+                        <div class="galItemInfo">
+                            <span class="galLocTag">${item.loc}</span>
+                            <div class="galItemTitle">${item.title}</div>
+                        </div>
+                    `;
+            el.onclick = () => openLightbox(item);
+            grid.appendChild(el);
+
+            // Simple animation
+            setTimeout(() => {
+              el.style.opacity = "1";
+            }, index * 30);
+          });
+        }
+
+        const lightbox = document.getElementById("galLightbox");
+        const lbImg = document.getElementById("lbImg");
+        const lbTitle = document.getElementById("lbTitle");
+        const lbDesc = document.getElementById("lbDesc");
+
+        function openLightbox(item) {
+          lbImg.src = item.img;
+          lbTitle.innerText = `${item.title} - ${item.loc}`;
+          lbDesc.innerText = item.desc;
+          lightbox.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        document.getElementById("galClose").onclick = () => {
+          lightbox.classList.remove("active");
+          document.body.style.overflow = "auto";
+        };
+
+        document.querySelectorAll(".filterBtn").forEach((btn) => {
+          btn.onclick = () => {
+            document
+              .querySelectorAll(".filterBtn")
+              .forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            renderGallery(btn.dataset.filter);
+          };
+        });
+
+        // Initial render
+        renderGallery();
+      });
+    </script>
+  </body>
+</html>

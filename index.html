@@ -1,0 +1,1434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- SEO & LOCAL OPTIMIZATION -->
+    <title>
+      Sugar City Ambulance | 24/7 Ambulance Service in KM Doddi, Malavalli &
+      Mandya
+    </title>
+    <meta
+      name="description"
+      content="Premium 24/7 emergency ambulance service in KM Doddi (Bharathi Nagar), Malavalli, Maddur, Mandya, and Mysore. Specialized ICU, Ventilator, and Oxygen ambulance support. Founded by Yamuna N S."
+    />
+    <meta
+      name="keywords"
+      content="Ambulance service in KM Doddi, Ambulance service in Bharathi Nagar, Emergency ambulance service in KM Doddi, Ambulance service in Malavalli, Ambulance service in Maddur, Ambulance service in Mandya, Ambulance service in Mysore, ICU ambulance service, Ventilator ambulance"
+    />
+
+    <!-- OPEN GRAPH -->
+    <meta
+      property="og:title"
+      content="Sugar City Ambulance Services - KM Doddi's Trusted Emergency Partner"
+    />
+    <meta
+      property="og:description"
+      content="Rapid response medical transport across KM Doddi, Malavalli, and Mandya. Advanced ICU and Ventilator support available 24/7."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <style>
+      :root {
+        --stkPrimaryRed: #e30613;
+        --stkNavy: #0b0f2b;
+        --stkDeepBlue: #050c2f;
+        --stkLightBg: #f4f4f6;
+        --stkTextGray: #6b7280;
+        --stkSoftPink: #fde8ea;
+        --stkWhite: #ffffff;
+        --primary: var(--stkPrimaryRed);
+        --overlay: rgba(5, 12, 47, 0.7);
+        --hmeTransition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      /* RESET & BASE */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        border-radius: 0 !important;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+        -webkit-text-size-adjust: 100%;
+        background-color: var(--stkWhite);
+        color: var(--stkDeepBlue);
+        line-height: 1.6;
+      }
+
+      .hmeContainer {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      @media (min-width: 768px) {
+        .hmeContainer {
+          padding: 0 30px;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* SECTION 0: PRELOADER */
+      #hmePreloader {
+        position: fixed;
+        inset: 0;
+        background: var(--stkDeepBlue);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        transition:
+          opacity 0.5s ease,
+          visibility 0.5s ease;
+      }
+
+      .hmeLoaderLogo {
+        width: 100px;
+        margin-bottom: 20px;
+        animation: hmePulse 1.2s infinite ease-in-out;
+      }
+      .hmeLoaderText {
+        color: var(--stkWhite);
+        font-weight: 800;
+        letter-spacing: 3px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+      }
+
+      @keyframes hmePulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+      }
+
+      /* SECTION 1: HERO SLIDER */
+      .hmeHeroWrap {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: var(--stkDeepBlue);
+      }
+      /* MOBILE HERO NAVBAR SPACING FIX */
+
+      @media (max-width: 1023px) {
+        .hmeHeroWrap {
+          padding-top: 105px;
+          min-height: 100vh;
+          height: auto;
+        }
+
+        .hmeSlide {
+          align-items: flex-start;
+          padding-top: 40px;
+        }
+      }
+      .hmeSlider {
+        height: 100%;
+        width: 400%;
+        display: flex;
+        transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+      .hmeSlide {
+        width: 25%;
+        height: 100%;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+      }
+      .hmeSlide::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(5, 12, 47, 0.9) 20%,
+          rgba(5, 12, 47, 0.3) 100%
+        );
+        z-index: 1;
+      }
+      .hmeSlideContent {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+      }
+      .hmeSlideInner {
+        max-width: 800px;
+      }
+      .hmeSlide h2 {
+        font-size: clamp(2rem, 8vw, 4.5rem);
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: var(--stkWhite);
+      }
+      .hmeSlide p {
+        font-size: clamp(0.95rem, 2vw, 1.15rem);
+        margin-bottom: 35px;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 600px;
+      }
+      .hmeBtnGroup {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      .hmeBtn {
+        padding: 18px 36px;
+        font-weight: 800;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        transition: var(--hmeTransition);
+        border: 2px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hmeBtnPrimary {
+        background: var(--stkPrimaryRed);
+        color: var(--stkWhite);
+      }
+      .hmeBtnPrimary:hover {
+        background: var(--stkWhite);
+        color: var(--stkPrimaryRed);
+      }
+      .hmeBtnOutline {
+        border-color: var(--stkWhite);
+        color: var(--stkWhite);
+      }
+      .hmeBtnOutline:hover {
+        background: var(--stkWhite);
+        color: var(--stkDeepBlue);
+      }
+      /* HERO SLIDER DOTS POSITION FIX */
+
+      .hmeSliderDots {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+        display: flex;
+        gap: 12px;
+
+        z-index: 20;
+      }
+
+      /* TABLET */
+
+      @media (min-width: 768px) {
+        .hmeSliderDots {
+          bottom: 30px;
+          right: 30px;
+        }
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 1024px) {
+        .hmeSliderDots {
+          bottom: 40px;
+          right: 40px;
+        }
+      }
+      @media (max-width: 480px) {
+        .hmeBtnGroup {
+          margin-bottom: 70px;
+        }
+      }
+      .hmeDot {
+        width: 12px;
+        height: 12px;
+        border: 2px solid var(--stkWhite);
+        cursor: pointer;
+        transition: var(--hmeTransition);
+      }
+      .hmeDot.active {
+        background: var(--stkPrimaryRed);
+        border-color: var(--stkPrimaryRed);
+        width: 40px;
+      }
+
+      /* SECTION 2: ABOUT PREVIEW */
+      .hmeAbout {
+        padding: 80px 0;
+        background: var(--stkWhite);
+      }
+      .hmeAboutGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      @media (min-width: 1024px) {
+        .hmeAboutGrid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .hmeSectionHead h3 {
+        color: var(--stkPrimaryRed);
+        font-size: 0.85rem;
+        letter-spacing: 4px;
+        font-weight: 800;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+      }
+      .hmeSectionHead h2 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        line-height: 1.1;
+      }
+      .hmeAboutText p {
+        color: var(--stkTextGray);
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+      .hmeAboutImg img {
+        border: 15px solid var(--stkLightBg);
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+      }
+
+      /* SECTION 3: ANIMATED STATS */
+      .hmeStats {
+        background: var(--stkNavy);
+        padding: 80px 0;
+        color: var(--stkWhite);
+      }
+      .hmeStatsGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      @media (min-width: 1024px) {
+        .hmeStatsGrid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px;
+        }
+      }
+      .hmeStatItem {
+        text-align: center;
+      }
+      .hmeStatCirc {
+        width: 100px;
+        height: 100px;
+        border: 4px solid var(--stkPrimaryRed);
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .hmeStatCirc {
+          width: 120px;
+          height: 120px;
+          font-size: 1.8rem;
+        }
+      }
+      .hmeStatItem span {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.7;
+        font-weight: 700;
+        display: block;
+      }
+
+      /* SECTION 4: SERVICES SECTION */
+      .hmeServices {
+        padding: 80px 0;
+        background: var(--stkLightBg);
+      }
+      .hmeServGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        border: 2px solid var(--stkNavy);
+      }
+      @media (min-width: 640px) {
+        .hmeServGrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 1024px) {
+        .hmeServGrid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .hmeServCard {
+        background: var(--stkWhite);
+        padding: 40px 30px;
+        transition: var(--hmeTransition);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(11, 15, 43, 0.1);
+      }
+      .hmeServCard:hover {
+        background: var(--stkNavy);
+        color: var(--stkWhite);
+      }
+      .hmeServCard svg {
+        width: 45px;
+        height: 45px;
+        fill: var(--stkPrimaryRed);
+        margin-bottom: 20px;
+        transition: var(--hmeTransition);
+      }
+      .hmeServCard:hover svg {
+        fill: var(--stkWhite);
+        transform: scale(1.1);
+      }
+      .hmeServCard h4 {
+        font-size: 1.15rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 12px;
+        line-height: 1.2;
+        min-height: 2.8rem;
+        display: flex;
+        align-items: flex-start;
+      }
+      .hmeServCard p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        flex-grow: 1;
+      }
+
+      .hmeLearnLink {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--stkPrimaryRed);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: var(--hmeTransition);
+      }
+      .hmeServCard:hover .hmeLearnLink {
+        color: var(--stkWhite);
+      }
+      .hmeLearnLink i {
+        font-size: 0.9rem;
+        transition: transform 0.3s ease;
+      }
+      .hmeLearnLink:hover i {
+        transform: translateX(5px);
+      }
+
+      /* SECTION 5: SERVICE LOCATIONS */
+      .hmeLocations {
+        padding: 80px 0;
+        background: var(--stkWhite);
+      }
+      .hmeLocGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-top: 50px;
+      }
+      .hmeLocCard {
+        border: 2px solid #eef0f2;
+        padding: 35px 25px;
+        transition: var(--hmeTransition);
+        background: var(--stkWhite);
+      }
+      .hmeLocCard.hmeFeatured {
+        border-color: var(--stkPrimaryRed);
+        background: var(--stkSoftPink);
+      }
+      @media (min-width: 1200px) {
+        .hmeLocCard.hmeFeatured {
+          grid-column: span 2;
+        }
+      }
+      .hmeLocCard:hover {
+        border-color: var(--stkNavy);
+        transform: translateY(-5px);
+      }
+      .hmeLocIcon {
+        font-size: 1.8rem;
+        color: var(--stkPrimaryRed);
+        margin-bottom: 15px;
+      }
+      .hmeLocCard h4 {
+        font-size: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .hmeLocCard p {
+        font-size: 0.85rem;
+        color: var(--stkTextGray);
+      }
+
+      /* SECTION 6: CONTACT SECTION */
+      .hmeContact {
+        padding: 80px 0;
+        background: var(--stkDeepBlue);
+        color: var(--stkWhite);
+      }
+      .hmeContactGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+      @media (min-width: 1024px) {
+        .hmeContactGrid {
+          grid-template-columns: 0.9fr 1.1fr;
+        }
+      }
+      .hmeContactInfo h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+      }
+      .hmeInfBlock {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      .hmeInfIcon {
+        width: 50px;
+        height: 50px;
+        background: var(--stkPrimaryRed);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hmeInfText h5 {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        opacity: 0.5;
+      }
+      .hmeInfText p {
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+      .hmeForm {
+        background: var(--stkWhite);
+        padding: 30px;
+        color: var(--stkDeepBlue);
+      }
+      @media (min-width: 768px) {
+        .hmeForm {
+          padding: 50px;
+        }
+      }
+      .hmeFormRow {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      @media (min-width: 768px) {
+        .hmeFormRow {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .hmeForm input,
+      .hmeForm textarea {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #eef0f2;
+        font-size: 0.95rem;
+        outline: none;
+        background: var(--stkLightBg);
+      }
+      .hmeForm input:focus,
+      .hmeForm textarea:focus {
+        border-color: var(--stkPrimaryRed);
+        background: var(--stkWhite);
+      }
+      .hmeSubmit {
+        width: 100%;
+        background: var(--stkPrimaryRed);
+        color: var(--stkWhite);
+        padding: 20px;
+        border: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: var(--hmeTransition);
+      }
+      .hmeSubmit:hover {
+        background: var(--stkNavy);
+      }
+
+      /* REVEAL */
+      .hmeReveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .hmeVisible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .hmeSocials {
+        display: flex;
+        gap: 12px;
+        margin-top: 30px;
+      }
+      .hmeSocialLink {
+        width: 40px;
+        height: 40px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--stkWhite);
+        text-decoration: none;
+      }
+      .hmeTextCenter {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Topbar -->
+    <div class="navbtopbar" id="navbtopbar">
+      <a href="tel:+9186630453040">
+        <i class="fas fa-phone-alt"></i>
+        <span>+91 86630453040</span>
+      </a>
+    </div>
+
+    <header class="navbheader" id="navbheader">
+      <div class="navbcontainer">
+        <!-- Logo & Text Section -->
+        <a
+          href="./index.html"
+          class="navblogowrapper"
+          aria-label="Sugar City Ambulance Home"
+        >
+          <img
+            src="./assets/logo.webp"
+            alt="Sugar City Ambulance Services Logo"
+            id="navblogoid"
+          />
+          <div class="navbbrandtext">
+            <span class="navbbrandtitle">Sugar City</span>
+            <span class="navbbrandsubtitle">Ambulance Services</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbmenu" id="navbmenuwrapper">
+          <ul class="navbul">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="navbrightactions">
+          <div class="navbsocialswrapper">
+            <a href="https://wa.me/9186630453040" class="navbsociallink"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://www.facebook.com/" class="navbsociallink"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/" class="navbsociallink"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/" class="navbsociallink"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+
+          <!-- Call Block (Desktop Only) -->
+          <a
+            href="tel:+9186630453040"
+            class="navbcontactblock"
+            id="navbcallbutton"
+          >
+            <div class="navbdialiconarea">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="navbcontactinfo">
+              <span class="navbcalltext">Call Us Now</span>
+              <span class="navbphonenumber">+91 86630453040</span>
+            </div>
+          </a>
+
+          <!-- Hamburger (Mobile Only) -->
+          <button
+            class="navbhamburger"
+            id="navbhamburgerbtn"
+            aria-label="Open Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="navbmobileoverlay" id="navbmobilemenu">
+      <button class="navbmobileclose" id="navbclosebtn">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <ul class="navbmobilelinks">
+        <li><a href="./index.html" class="navbmobileitem">Home</a></li>
+        <li><a href="./services.html" class="navbmobileitem">Services</a></li>
+        <li><a href="./about.html" class="navbmobileitem">About Us</a></li>
+        <li><a href="./gallery.html" class="navbmobileitem">Gallery</a></li>
+        <li><a href="./contact.html" class="navbmobileitem">Contact</a></li>
+      </ul>
+
+      <div class="navbmobilesocials">
+        <a href="https://wa.me/9186630453040" class="navbmobilesociallink"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://www.facebook.com/" class="navbmobilesociallink"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/" class="navbmobilesociallink"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/" class="navbmobilesociallink"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </div>
+    <!-- SECTION 0: PRELOADER -->
+    <div id="hmePreloader">
+      <img
+        src="./assets/logo.jpeg"
+        alt="Sugar City Ambulance"
+        class="hmeLoaderLogo"
+      />
+      <div class="hmeLoaderText">Sugar City Ambulance Services</div>
+    </div>
+
+    <main>
+      <!-- SECTION 1: HERO SLIDER -->
+      <section class="hmeHeroWrap">
+        <div class="hmeSlider" id="hmeSlider">
+          <div
+            class="hmeSlide"
+            style="background-image: url(&quot;./assets/hero.webp&quot;)"
+          >
+            <div class="hmeContainer hmeSlideContent">
+              <div class="hmeSlideInner">
+                <h2>Ambulance Service in KM Doddi</h2>
+                <p>
+                  Immediate 24/7 emergency response across Bharathi Nagar.
+                  Advanced ICU and Ventilator support for critical shifts in KM
+                  Doddi.
+                </p>
+                <div class="hmeBtnGroup">
+                  <a href="tel:+9186630453040" class="hmeBtn hmeBtnPrimary"
+                    >Call Now</a
+                  >
+                  <a href="#contact" class="hmeBtn hmeBtnOutline"
+                    >Book Ambulance</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hmeSlide"
+            style="background-image: url(&quot;./assets/hero.webp&quot;)"
+          >
+            <div class="hmeContainer hmeSlideContent">
+              <div class="hmeSlideInner">
+                <h2>Expert Care in Malavalli</h2>
+                <p>
+                  Reliable emergency ambulance services in Malavalli and Maddur.
+                  Equipped with medical oxygen and expert paramedic staff
+                  available 24/7.
+                </p>
+                <div class="hmeBtnGroup">
+                  <a href="tel:+9186630453040" class="hmeBtn hmeBtnPrimary"
+                    >Request Support</a
+                  >
+                  <a href="#services" class="hmeBtn hmeBtnOutline"
+                    >Our Services</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hmeSlide"
+            style="background-image: url(&quot;./assets/hero.webp&quot;)"
+          >
+            <div class="hmeContainer hmeSlideContent">
+              <div class="hmeSlideInner">
+                <h2>Critical Transfers in Mandya</h2>
+                <p>
+                  The fastest inter-hospital ICU transfers in Mandya city.
+                  Bed-to-bed service with high-end cardiac monitoring and
+                  ventilator support.
+                </p>
+                <div class="hmeBtnGroup">
+                  <a href="tel:+9186630453040" class="hmeBtn hmeBtnPrimary"
+                    >Emergency Link</a
+                  >
+                  <a href="#contact" class="hmeBtn hmeBtnOutline">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hmeSlide"
+            style="background-image: url(&quot;./assets/hero.webp&quot;)"
+          >
+            <div class="hmeContainer hmeSlideContent">
+              <div class="hmeSlideInner">
+                <h2>Advanced Mysore Response</h2>
+                <p>
+                  Bridging patients from home to hospital across Mysore region.
+                  24-hour availability for all types of high-end medical
+                  transport.
+                </p>
+                <div class="hmeBtnGroup">
+                  <a href="tel:+9186630453040" class="hmeBtn hmeBtnPrimary"
+                    >Contact Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hmeSliderDots" id="hmeSliderDots"></div>
+      </section>
+
+      <!-- SECTION 2: ABOUT PREVIEW -->
+      <section class="hmeAbout">
+        <div class="hmeContainer">
+          <div class="hmeAboutGrid">
+            <div class="hmeAboutText hmeReveal">
+              <div class="hmeSectionHead">
+                <h3>Our Legacy</h3>
+                <h2>Saving Lives in KM Doddi Since 2020</h2>
+              </div>
+              <p>
+                Founded by <strong>Yamuna N S</strong>, Sugar City Ambulance
+                Services provides the most reliable
+                <strong
+                  >emergency ambulance service in KM Doddi (Bharathi
+                  Nagar)</strong
+                >.
+              </p>
+              <p>
+                We are a regional leader, offering specialized
+                <strong
+                  >ambulance services in Malavalli, Maddur, Mandya, and
+                  Mysore</strong
+                >. We bridge the gap between emergency onset and professional
+                care.
+              </p>
+            </div>
+            <div class="hmeAboutImg hmeReveal">
+              <img
+                src="./assets/hero.webp"
+                alt="Sugar City Ambulance Foundation"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: ANIMATED STATS -->
+      <section class="hmeStats">
+        <div class="hmeContainer">
+          <div class="hmeStatsGrid">
+            <div class="hmeStatItem hmeReveal">
+              <div class="hmeStatCirc" data-val="5">0</div>
+              <span>Years Exp</span>
+            </div>
+            <div class="hmeStatItem hmeReveal">
+              <div class="hmeStatCirc" data-val="24">0</div>
+              <span>Hrs Support</span>
+            </div>
+            <div class="hmeStatItem hmeReveal">
+              <div class="hmeStatCirc" data-val="1000">0</div>
+              <span>Patients</span>
+            </div>
+            <div class="hmeStatItem hmeReveal">
+              <div class="hmeStatCirc" data-val="5">0</div>
+              <span>Locations</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: SERVICES SECTION -->
+      <section id="services" class="hmeServices">
+        <div class="hmeContainer">
+          <div class="hmeSectionHead hmeTextCenter hmeReveal">
+            <h3>Specialized Care</h3>
+            <h2>Our Medical Fleet</h2>
+          </div>
+          <div class="hmeServGrid">
+            <!-- Service 1 -->
+            <div class="hmeServCard hmeReveal">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5M19.5,12H18V13.5H17V12H15.5V11H17V9.5H18V11H19.5V12M6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5M17,8H15V13H14V5H12V3H2V17H3.09C3.04,17.33 3,17.66 3,18A3,3 0 0,0 6,21A3,3 0 0,0 9,18C9,17.66 8.96,17.33 8.91,17H15.09C15.04,17.33 15,17.66 15,18A3,3 0 0,0 18,21A3,3 0 0,0 21,18C21,17.66 20.96,17.33 20.91,17H22V13L17,8Z"
+                />
+              </svg>
+              <h4>Basic Life Support</h4>
+              <p>
+                Reliable medical transport for stable patients across KM Doddi
+                and Bharathi Nagar.
+              </p>
+              <a href="./services.html" class="hmeLearnLink"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+            <!-- Service 2 -->
+            <div class="hmeServCard hmeReveal">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,6H13V11H18V13H13V18H11V13H6V11H11V6Z"
+                />
+              </svg>
+              <h4>Ventilator Ambulance</h4>
+              <p>
+                High-end units equipped with lung-protective ventilation for
+                critical care transit.
+              </p>
+              <a href="./services.html" class="hmeLearnLink"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+            <!-- Service 3 -->
+            <div class="hmeServCard hmeReveal">
+              <svg viewBox="0 0 24 24">
+                <path d="M3,5V19L11,12L3,5M13,19V5L21,12L13,19Z" />
+              </svg>
+              <h4>Full ICU Setup</h4>
+              <p>
+                Complete mobile ICU environment for high-risk transfers between
+                hospitals.
+              </p>
+              <a href="./services.html" class="hmeLearnLink"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+            <!-- Service 4 -->
+            <div class="hmeServCard hmeReveal">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16,11H13V8H11V11H8V13H11V16H13V13H16V11Z"
+                />
+              </svg>
+              <h4>Oxygen Support</h4>
+              <p>
+                Ambulances with continuous high-flow oxygen for respiratory
+                emergencies.
+              </p>
+              <a href="./services.html" class="hmeLearnLink"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+            <!-- Service 5 -->
+            <div class="hmeServCard hmeReveal">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19,15V13H15V15H19M15,19V17H19V19H15M13,3H11V21H13V3M7,5H3V7H7V5M3,11H7V9H3V11M7,15H3V13H7V15M3,19H7V17H3V19M15,7H19V5H15V7M19,11H15V9H19V11Z"
+                />
+              </svg>
+              <h4>Freezer Services</h4>
+              <p>
+                Professional dead body freezer box for dignified and safe
+                local/long-distance transport.
+              </p>
+              <a href="./services.html" class="hmeLearnLink"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+            <!-- Service 6 -->
+            <div class="hmeServCard hmeReveal">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"
+                />
+              </svg>
+              <h4>Patient Transfer</h4>
+              <p>
+                Premium medical cab service for non-emergency clinic visits and
+                hospital checkups.
+              </p>
+              <a href="./services.html" class="hmeLearnLink"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+            <!-- Service 7 -->
+            <div class="hmeServCard hmeReveal">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5Z"
+                />
+              </svg>
+              <h4>Concentrators</h4>
+              <p>
+                Oxygen concentrators and cylinders available for rent for home
+                healthcare use.
+              </p>
+              <a href="./services.html" class="hmeLearnLink"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+            <!-- Service 8 -->
+            <div class="hmeServCard hmeReveal">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M15,14V11H13V14H10V16H13V19H15V16H18V14H15M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20Z"
+                />
+              </svg>
+              <h4>Regional Shifting</h4>
+              <p>
+                Fast emergency patient shifting between Mandya and Mysore
+                specialized hospitals.
+              </p>
+              <a href="./services.html" class="hmeLearnLink"
+                >Learn More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: SERVICE LOCATIONS -->
+      <section class="hmeLocations">
+        <div class="hmeContainer">
+          <div class="hmeSectionHead hmeTextCenter hmeReveal">
+            <h3>Local Coverage</h3>
+            <h2>Areas We Serve</h2>
+          </div>
+          <div class="hmeLocGrid">
+            <div class="hmeLocCard hmeFeatured hmeReveal">
+              <div class="hmeLocIcon"><i class="fas fa-star-of-life"></i></div>
+              <h4>KM DODDI (BHARATHI NAGAR)</h4>
+              <p>
+                Our main operations hub. 5-10 minute response time for all of KM
+                Doddi. Primary emergency partner for local clinics.
+              </p>
+            </div>
+            <div class="hmeLocCard hmeReveal">
+              <div class="hmeLocIcon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h4>MALAVALLI</h4>
+              <p>
+                Standby units for rapid response in Malavalli town and rural
+                belts.
+              </p>
+            </div>
+            <div class="hmeLocCard hmeReveal">
+              <div class="hmeLocIcon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h4>MADDUR</h4>
+              <p>Quick access to highway emergencies and town-level support.</p>
+            </div>
+            <div class="hmeLocCard hmeReveal">
+              <div class="hmeLocIcon"><i class="fas fa-hospital"></i></div>
+              <h4>MANDYA</h4>
+              <p>
+                Inter-hospital ICU transfers and transport to district
+                hospitals.
+              </p>
+            </div>
+            <div class="hmeLocCard hmeReveal">
+              <div class="hmeLocIcon"><i class="fas fa-city"></i></div>
+              <h4>MYSORE</h4>
+              <p>
+                Bridging patient needs for advanced treatments in Mysore
+                centers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: CONTACT SECTION -->
+      <section id="contact" class="hmeContact">
+        <div class="hmeContainer">
+          <div class="hmeContactGrid">
+            <div class="hmeContactInfo hmeReveal">
+              <h2>Ready to Assist 24/7</h2>
+              <div class="hmeInfBlock">
+                <div class="hmeInfIcon"><i class="fas fa-phone-alt"></i></div>
+                <div class="hmeInfText">
+                  <h5>Emergency Helpline</h5>
+                  <p>+91 86630453040</p>
+                </div>
+              </div>
+              <div class="hmeInfBlock">
+                <div class="hmeInfIcon"><i class="fab fa-whatsapp"></i></div>
+                <div class="hmeInfText">
+                  <h5>WhatsApp Us</h5>
+                  <p>+91 8105980578</p>
+                </div>
+              </div>
+              <div class="hmeInfBlock">
+                <div class="hmeInfIcon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="hmeInfText">
+                  <h5>Headquarters</h5>
+                  <p>Bharathi Nagar (KM Doddi), Mandya - 571422</p>
+                </div>
+              </div>
+              <div class="hmeSocials">
+                <a href="https://wa.me/9186630453040" class="hmeSocialLink"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a href="https://www.facebook.com/" class="hmeSocialLink"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="https://www.instagram.com/" class="hmeSocialLink"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/" class="hmeSocialLink"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="hmeForm hmeReveal">
+              <form action="https://formspree.io/f/mzdowkzo" method="POST">
+                <div class="hmeFormRow">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Requirement (e.g., ICU Ambulance)"
+                  style="margin-bottom: 20px"
+                />
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Details of your requirement"
+                  required
+                  style="margin-bottom: 20px"
+                ></textarea>
+                <button type="submit" class="hmeSubmit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="ftrMainFooter"
+      itemscope
+      itemtype="http://schema.org/LocalBusiness"
+    >
+      <div class="ftrContainer">
+        <div class="ftrGrid">
+          <!-- COLUMN 1: BRAND -->
+          <div class="ftrBrandBox">
+            <img
+              src="./assets/logoo.webp"
+              alt="Sugar City Ambulance Services Logo"
+              class="ftrLogo"
+              loading="lazy"
+              onclick="window.location.href = 'index.html'"
+              style="cursor: pointer"
+            />
+            <h2 itemprop="name">Sugar City Ambulance</h2>
+            <p itemprop="description">
+              Premium 24/7
+              <strong>emergency ambulance service</strong> providing life-saving
+              medical transport. We specialize in
+              <strong>ICU ambulance</strong> and
+              <strong>ventilator ambulance</strong> support, serving
+              <strong>KM Doddi</strong>, <strong>Bharathi Nagar</strong>,
+              <strong>Malavalli</strong>, and the wider Mandya region.
+            </p>
+          </div>
+
+          <!-- COLUMN 2: FIND US (MAP) -->
+          <div class="ftrMapCol">
+            <h3 class="ftrColTitle">Find Us</h3>
+            <div class="ftrMapWrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.4707038342435!2d77.03322127411234!3d12.484929325363275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf070004d851d7%3A0xc15f18c7130c5ee3!2sSugar%20City%20ambulance%20service!5e0!3m2!1sen!2sin!4v1778396713061!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Sugar City Ambulance Location"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: QR SECTION -->
+          <div class="ftrQrCol">
+            <h3 class="ftrColTitle">Quick Contact</h3>
+            <div class="ftrQrBox">
+              <img
+                src="./assets/QR.webp"
+                alt="Scan to Call"
+                class="ftrQrImage"
+                loading="lazy"
+              />
+              <p>Scan to get Location</p>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: CONTACT -->
+          <div class="ftrContactCol">
+            <h3 class="ftrColTitle">Emergency Links</h3>
+            <ul class="ftrContactList">
+              <li
+                class="ftrContactItem"
+                itemprop="address"
+                itemscope
+                itemtype="http://schema.org/PostalAddress"
+              >
+                <div class="ftrContactIcon">
+                  <i class="fas fa-location-dot"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Headquarters</h4>
+                  <span itemprop="streetAddress">Bharathi Nagar, KM Doddi</span>
+                  <span itemprop="addressLocality">Mandya, Karnataka</span>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>24/7 Helpline</h4>
+                  <a href="tel:+9186630453040" itemprop="telephone"
+                    >+91 86630453040</a
+                  >
+                  <br />
+                  <a href="tel:+919740855109" itemprop="telephone"
+                    >+91 9740855109</a
+                  ><br />
+                  <a href="tel:+918105980578" itemprop="telephone"
+                    >+91 8105980578</a
+                  >
+                  <div class="ftrEmergencyTag">Emergency Ready</div>
+                </div>
+              </li>
+              <li class="ftrContactItem">
+                <div class="ftrContactIcon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="ftrContactText">
+                  <h4>Email</h4>
+                  <a href="mailto:sugarcityambulance@gmail.com" itemprop="email"
+                    >sugarcityambulance@gmail.com</a
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div class="ftrSocialLinks">
+              <a
+                href="https://wa.me/86630453040"
+                class="ftrSocialBtn"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/"
+                class="ftrSocialBtn"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                class="ftrSocialBtn"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/"
+                class="ftrSocialBtn"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="ftrBottomBar">
+        <div class="ftrContainer">
+          <div class="ftrBottomFlex">
+            <p>
+              &copy; <span id="ftrYear"></span>
+              <strong>Sugar City Ambulance</strong>. All Rights Reserved.
+            </p>
+            <p>
+              <i
+                class="fas fa-shield-heart"
+                style="color: var(--stkPrimaryRed); margin-right: 5px"
+              ></i>
+              Designed By
+              <a
+                href="https://arouzatechlabs.in/"
+                style="text-decoration: none; color: var(--stkPrimaryRed)"
+                >AROUZA TECHLABS
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GO TO TOP BUTTON -->
+      <div id="ftrBackToTop" title="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </footer>
+    <script src="./navbar.js"></script>
+    <script src="./footer.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        const pre = document.getElementById("hmePreloader");
+        setTimeout(() => {
+          pre.style.opacity = "0";
+          pre.style.visibility = "hidden";
+        }, 600);
+      });
+
+      const slider = document.getElementById("hmeSlider");
+      const dotsContainer = document.getElementById("hmeSliderDots");
+      const slideCount = 4;
+      let activeIdx = 0;
+
+      for (let i = 0; i < slideCount; i++) {
+        const dot = document.createElement("div");
+        dot.className = i === 0 ? "hmeDot active" : "hmeDot";
+        dot.addEventListener("click", () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+
+      function goToSlide(idx) {
+        activeIdx = idx;
+        slider.style.transform = `translateX(-${idx * 25}%)`;
+        document.querySelectorAll(".hmeDot").forEach((d, i) => {
+          d.classList.toggle("active", i === idx);
+        });
+      }
+
+      setInterval(() => {
+        activeIdx = (activeIdx + 1) % slideCount;
+        goToSlide(activeIdx);
+      }, 3500);
+
+      function animateCounter(el) {
+        const target = +el.getAttribute("data-val");
+        let current = 0;
+        const increment = target / 40;
+        const update = () => {
+          current += increment;
+          if (current < target) {
+            el.innerText = Math.ceil(current) + (target > 50 ? "+" : "");
+            requestAnimationFrame(update);
+          } else {
+            el.innerText = target + (target > 50 ? "+" : "");
+          }
+        };
+        update();
+      }
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("hmeVisible");
+              if (
+                entry.target.classList.contains("hmeStatCirc") &&
+                !entry.target.dataset.done
+              ) {
+                animateCounter(entry.target);
+                entry.target.dataset.done = "true";
+              }
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document
+        .querySelectorAll(".hmeReveal, .hmeStatCirc")
+        .forEach((el) => revealObserver.observe(el));
+    </script>
+  </body>
+</html>

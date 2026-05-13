@@ -1,0 +1,285 @@
+:root {
+  --stkPrimaryRed: #e30613;
+  --stkNavy: #0b0f2b;
+  --stkDeepBlue: #050c2f;
+  --stkLightBg: #f4f4f6;
+  --stkTextGray: #6b7280;
+  --stkSoftPink: #fde8ea;
+  --stkWhite: #ffffff;
+  --ftrOverlay: rgba(5, 12, 47, 0.96);
+  --ftrTransition: all 0.3s ease;
+}
+
+/* RESET & BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ftrMainFooter {
+  background-color: var(--stkDeepBlue);
+  color: var(--stkWhite);
+  padding: 60px 0 0 0;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid var(--stkPrimaryRed);
+  width: 100%;
+}
+
+.ftrContainer {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* GRID SYSTEM - MOBILE FIRST */
+.ftrGrid {
+  display: grid;
+  grid-template-columns: 100%; /* Explicit single column for mobile */
+  gap: 40px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ftrGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ftrGrid {
+    grid-template-columns: 1.2fr 1fr 0.8fr 1fr;
+  }
+}
+
+/* COLUMN 1: BRAND */
+.ftrBrandBox .ftrLogo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.ftrBrandBox h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: var(--stkWhite);
+  word-wrap: break-word;
+}
+
+.ftrBrandBox p {
+  font-size: 0.9rem;
+  color: var(--stkTextGray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.ftrSeoKeywords {
+  display: none;
+}
+
+/* COLUMN 2: MAP */
+.ftrColTitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: var(--stkPrimaryRed);
+  position: relative;
+  display: inline-block;
+}
+
+.ftrMapWrapper {
+  width: 100%;
+  height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--stkNavy);
+  overflow: hidden;
+}
+
+.ftrMapWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  /* filter: grayscale(1) invert(0.9) contrast(1.2); */
+}
+
+/* COLUMN 3: QR SECTION */
+.ftrQrBox {
+  text-align: left;
+}
+
+.ftrQrImage {
+  width: 140px;
+  height: 140px;
+  background: var(--stkWhite);
+  padding: 10px;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+.ftrQrBox p {
+  font-size: 0.85rem;
+  color: var(--stkTextGray);
+  font-weight: 600;
+}
+
+/* COLUMN 4: CONTACT */
+.ftrContactList {
+  list-style: none;
+  padding: 0;
+}
+
+.ftrContactItem {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.ftrContactIcon {
+  color: var(--stkPrimaryRed);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.ftrContactText {
+  overflow: hidden; /* Prevents text overflow */
+  width: 100%;
+}
+
+.ftrContactText h4 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.ftrContactText a,
+.ftrContactText span {
+  color: var(--stkWhite);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--ftrTransition);
+  display: block;
+  word-break: break-all; /* Critical for long emails/links on mobile */
+  overflow-wrap: anywhere;
+}
+
+.ftrContactText a:hover {
+  color: var(--stkPrimaryRed);
+}
+
+.ftrEmergencyTag {
+  background: var(--stkPrimaryRed);
+  color: var(--stkWhite);
+  padding: 4px 10px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.ftrSocialLinks {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.ftrSocialBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--stkNavy);
+  color: var(--stkWhite);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: var(--ftrTransition);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ftrSocialBtn:hover {
+  background: var(--stkPrimaryRed);
+  transform: translateY(-3px);
+}
+
+/* COPYRIGHT BAR */
+.ftrBottomBar {
+  margin-top: 60px;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.ftrBottomFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ftrBottomFlex {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.ftrBottomFlex p {
+  font-size: 0.75rem;
+  color: var(--stkTextGray);
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
+}
+
+.ftrBottomFlex strong {
+  color: var(--stkWhite);
+}
+
+/* BACK TO TOP */
+#ftrBackToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--stkPrimaryRed);
+  color: var(--stkWhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--ftrTransition);
+  box-shadow: 0 10px 20px rgba(227, 6, 19, 0.3);
+}
+
+#ftrBackToTop.ftrVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#ftrBackToTop:hover {
+  background: var(--stkWhite);
+  color: var(--stkPrimaryRed);
+  transform: scale(1.1);
+}
