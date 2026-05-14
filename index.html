@@ -405,14 +405,23 @@
         .hmeSlide {
           min-height: calc(100vh - 105px);
 
-          padding-top: 20px;
-          padding-bottom: 110px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-          align-items: flex-start;
+          padding-top: 0;
+          padding-bottom: 90px;
+
+          text-align: center;
         }
 
         .hmeSlideContent {
-          padding-top: 10px;
+          width: 100%;
+        }
+
+        .hmeSlideInner {
+          max-width: 100%;
+          margin: 0 auto;
         }
 
         .hmeSlide h2 {
@@ -428,14 +437,19 @@
         .hmeSlide p {
           font-size: 1rem;
 
-          line-height: 1.65;
+          line-height: 1.7;
 
           margin-bottom: 30px;
+
+          max-width: 100%;
         }
 
         .hmeBtnGroup {
           flex-direction: column;
+
           width: 100%;
+
+          align-items: center;
         }
 
         .hmeBtn {
@@ -444,7 +458,9 @@
         }
 
         .hmeSliderDots {
-          right: 20px;
+          right: 50%;
+          transform: translateX(50%);
+
           bottom: 28px;
         }
       }
