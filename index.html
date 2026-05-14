@@ -137,158 +137,349 @@
         }
       }
 
-      /* SECTION 1: HERO SLIDER */
+      /* =========================================================
+   SECTION 1 : HERO SLIDER
+========================================================= */
+
       .hmeHeroWrap {
         position: relative;
-        height: 100vh;
         width: 100%;
+        height: 100vh;
         overflow: hidden;
         background: var(--stkDeepBlue);
       }
-      /* MOBILE HERO NAVBAR SPACING FIX */
 
-      @media (max-width: 1023px) {
-        .hmeHeroWrap {
-          padding-top: 105px;
-          min-height: 100vh;
-          height: auto;
-        }
+      /* SLIDER */
 
-        .hmeSlide {
-          align-items: flex-start;
-          padding-top: 40px;
-        }
-      }
       .hmeSlider {
-        height: 100%;
         width: 400%;
+        height: 100%;
         display: flex;
         transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
       }
+
+      /* EACH SLIDE */
+
       .hmeSlide {
+        position: relative;
         width: 25%;
         height: 100%;
-        position: relative;
-        background-size: cover;
-        background-position: center;
+
         display: flex;
         align-items: center;
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
       }
+
+      /* DARK OVERLAY */
+
       .hmeSlide::before {
         content: "";
         position: absolute;
         inset: 0;
+
         background: linear-gradient(
           90deg,
-          rgba(5, 12, 47, 0.9) 20%,
-          rgba(5, 12, 47, 0.3) 100%
+          rgba(5, 12, 47, 0.88) 15%,
+          rgba(5, 12, 47, 0.55) 55%,
+          rgba(5, 12, 47, 0.25) 100%
         );
+
         z-index: 1;
       }
+
+      /* CONTENT WRAPPER */
+
       .hmeSlideContent {
         position: relative;
         z-index: 10;
         width: 100%;
       }
+
+      /* INNER CONTENT */
+
       .hmeSlideInner {
-        max-width: 800px;
+        width: 100%;
+        max-width: 760px;
       }
+
+      /* TITLE */
+
       .hmeSlide h2 {
-        font-size: clamp(2rem, 8vw, 4.5rem);
-        font-weight: 800;
-        line-height: 1;
-        margin-bottom: 20px;
+        font-size: clamp(2.5rem, 7vw, 5.5rem);
+        font-weight: 900;
+
+        line-height: 0.95;
+        letter-spacing: -2px;
+
+        margin-bottom: 22px;
+
         text-transform: uppercase;
         color: var(--stkWhite);
+
+        text-shadow:
+          0 2px 10px rgba(0, 0, 0, 0.35),
+          0 4px 25px rgba(0, 0, 0, 0.25);
       }
+
+      /* DESCRIPTION */
+
       .hmeSlide p {
-        font-size: clamp(0.95rem, 2vw, 1.15rem);
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.8;
+
+        max-width: 650px;
+
         margin-bottom: 35px;
-        color: rgba(255, 255, 255, 0.8);
-        max-width: 600px;
+
+        color: rgba(255, 255, 255, 0.88);
       }
+
+      /* BUTTON GROUP */
+
       .hmeBtnGroup {
         display: flex;
-        gap: 15px;
         flex-wrap: wrap;
+        gap: 16px;
       }
+
+      /* BUTTON */
+
       .hmeBtn {
-        padding: 18px 36px;
-        font-weight: 800;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        text-decoration: none;
-        transition: var(--hmeTransition);
-        border: 2px solid transparent;
+        min-width: 220px;
+
+        padding: 18px 34px;
+
         display: inline-flex;
         align-items: center;
         justify-content: center;
+
+        font-size: 0.82rem;
+        font-weight: 800;
+
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        transition: var(--hmeTransition);
+
+        border: 2px solid transparent;
+
+        cursor: pointer;
       }
+
+      /* PRIMARY BUTTON */
+
       .hmeBtnPrimary {
         background: var(--stkPrimaryRed);
         color: var(--stkWhite);
       }
+
       .hmeBtnPrimary:hover {
         background: var(--stkWhite);
         color: var(--stkPrimaryRed);
       }
+
+      /* OUTLINE BUTTON */
+
       .hmeBtnOutline {
+        background: transparent;
         border-color: var(--stkWhite);
         color: var(--stkWhite);
       }
+
       .hmeBtnOutline:hover {
         background: var(--stkWhite);
         color: var(--stkDeepBlue);
       }
-      /* HERO SLIDER DOTS POSITION FIX */
+
+      /* SLIDER DOTS */
 
       .hmeSliderDots {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
+
+        right: 30px;
+        bottom: 30px;
 
         display: flex;
+        align-items: center;
         gap: 12px;
 
         z-index: 20;
       }
 
-      /* TABLET */
+      /* DOT */
 
-      @media (min-width: 768px) {
-        .hmeSliderDots {
-          bottom: 30px;
-          right: 30px;
-        }
-      }
-
-      /* DESKTOP */
-
-      @media (min-width: 1024px) {
-        .hmeSliderDots {
-          bottom: 40px;
-          right: 40px;
-        }
-      }
-      @media (max-width: 480px) {
-        .hmeBtnGroup {
-          margin-bottom: 70px;
-        }
-      }
       .hmeDot {
         width: 12px;
         height: 12px;
+
         border: 2px solid var(--stkWhite);
+
         cursor: pointer;
+
         transition: var(--hmeTransition);
       }
+
+      /* ACTIVE DOT */
+
       .hmeDot.active {
+        width: 42px;
+
         background: var(--stkPrimaryRed);
         border-color: var(--stkPrimaryRed);
-        width: 40px;
       }
 
+      /* =========================================================
+   TABLET
+========================================================= */
+
+      @media (max-width: 1023px) {
+        .hmeHeroWrap {
+          height: auto;
+          min-height: 100vh;
+
+          padding-top: 105px;
+        }
+
+        .hmeSlider {
+          height: auto;
+        }
+
+        .hmeSlide {
+          min-height: calc(100vh - 105px);
+
+          align-items: center;
+
+          padding-top: 40px;
+          padding-bottom: 120px;
+        }
+
+        .hmeSlideInner {
+          max-width: 100%;
+        }
+
+        .hmeSlide h2 {
+          font-size: clamp(2.4rem, 8vw, 4rem);
+
+          line-height: 0.95;
+
+          margin-bottom: 18px;
+        }
+
+        .hmeSlide p {
+          font-size: 1rem;
+
+          line-height: 1.7;
+
+          margin-bottom: 28px;
+        }
+
+        .hmeBtn {
+          min-width: 200px;
+
+          padding: 17px 28px;
+        }
+
+        .hmeSliderDots {
+          bottom: 35px;
+          right: 20px;
+        }
+      }
+
+      /* =========================================================
+   MOBILE
+========================================================= */
+
+      @media (max-width: 767px) {
+        .hmeContainer {
+          padding: 0 22px;
+        }
+
+        .hmeHeroWrap {
+          padding-top: 105px;
+        }
+
+        .hmeSlide {
+          min-height: calc(100vh - 105px);
+
+          padding-top: 20px;
+          padding-bottom: 110px;
+
+          align-items: flex-start;
+        }
+
+        .hmeSlideContent {
+          padding-top: 10px;
+        }
+
+        .hmeSlide h2 {
+          font-size: 3.2rem;
+
+          line-height: 0.92;
+
+          letter-spacing: -1px;
+
+          margin-bottom: 20px;
+        }
+
+        .hmeSlide p {
+          font-size: 1rem;
+
+          line-height: 1.65;
+
+          margin-bottom: 30px;
+        }
+
+        .hmeBtnGroup {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .hmeBtn {
+          width: 100%;
+          min-width: 100%;
+        }
+
+        .hmeSliderDots {
+          right: 20px;
+          bottom: 28px;
+        }
+      }
+
+      /* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+      @media (max-width: 480px) {
+        .hmeSlide h2 {
+          font-size: 2.8rem;
+        }
+
+        .hmeSlide p {
+          font-size: 0.95rem;
+        }
+
+        .hmeBtn {
+          padding: 16px 20px;
+          font-size: 0.75rem;
+        }
+
+        .hmeSliderDots {
+          gap: 10px;
+        }
+
+        .hmeDot {
+          width: 11px;
+          height: 11px;
+        }
+
+        .hmeDot.active {
+          width: 36px;
+        }
+      }
       /* SECTION 2: ABOUT PREVIEW */
       .hmeAbout {
         padding: 80px 0;
